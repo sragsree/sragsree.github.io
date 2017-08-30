@@ -18,11 +18,11 @@
 
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home"><h4>About</h4></a></li>
-    <li><a data-toggle="tab" href="#menu1"><h4>Android/Java</h4></a></li>
-    <li><a data-toggle="tab" href="#menu2"><h4>Web Apps</h4></a></li>
-    <li><a data-toggle="tab" href="#menu3"><h4>Business intelligence</h4></a></li>
-    <li><a data-toggle="tab" href="#menu4"><h4>Distributed Systems</h4></a></li>
-    <li><a data-toggle="tab" href="#menu5"><h4>Embedded System</h4></a></li>
+    <li><a data-toggle="tab" href="#menu1"><h4>Android</h4></a></li>
+    <li><a data-toggle="tab" href="#menu2"><h4>Web</h4></a></li>
+    <li><a data-toggle="tab" href="#menu3"><h4>Business Intelligence</h4></a></li>
+    <li><a data-toggle="tab" href="#menu4"><h4>Security</h4></a></li>
+    <li><a data-toggle="tab" href="#menu5"><h4>Embedded</h4></a></li>
     <li><a data-toggle="tab" href="#menu6"><h4>C++</h4></a></li>  
     <li><a data-toggle="tab" href="#menu7"><h4>Contact</h4></a></li> 
   </ul>
@@ -48,11 +48,11 @@
   </div>
   <br>
    <div class="row">
-    <div class="col-md-2">Interest</div><div class="col-md-3"> Developing software applications & Learning new technologies</div>
+    <div class="col-md-2">Interest</div><div class="col-md-3"> Fulfilling challenging projects & Learning new technologies</div>
   </div>
   <br>
    <div class="row">
-    <div class="col-md-2">Proficiency</div><div class="col-md-3">Full stack sofware development</div>
+    <div class="col-md-2">Proficiency</div><div class="col-md-3">Full stack developer</div>
   </div>
 </div>
       
@@ -64,23 +64,27 @@
       <div class="panel-body">      
   <div class="container">
   <div class="row">
-    <div class="col-md-2">Languages</div><div class="col-md-3">Java, Python, C++, Julia, SQL, PL/SQL, Unix Commands, Android</div>
+    <div class="col-md-2">Languages</div><div class="col-md-3">Java, Python, C++, SQL, PL/SQL </div>
   </div>
   <br>
    <div class="row">
-    <div class="col-md-2">Web Technologies</div><div class="col-md-3">HTML5, CSS3, Javascript, Node.js, Jquery, Firebase, Bootstrap, MEAN Stack</div>
+    <div class="col-md-2">Web</div><div class="col-md-3">HTML5, CSS3, Javascript, Node.js</div>
   </div>
   <br>
    <div class="row">
-    <div class="col-md-2">Databases</div><div class="col-md-3">Oracle, MySql, MongoDB, SQLite</div>
+    <div class="col-md-2">Databases</div><div class="col-md-3">Oracle, Teradata, PostgresSQL, MySql, MongoDB, SQLite</div>
   </div>
   <br>
    <div class="row">
-    <div class="col-md-2">Development Tools</div><div class="col-md-3">K2 BlackPearl, K2 SmartForms, Informatica, SAP Business Objects, IntelliJ Idea, Eclipse, Android Studio etc </div>
+    <div class="col-md-2">Frameworks</div><div class="col-md-3">Spring, Hibernate, Android, Google Web Toolkit, MEAN Stack, Bootstrap, Backbone.js, K2 BlackPearl, JUnit, EasyMock</div>
   </div>
   <br>
+    <div class="row">
+    <div class="col-md-2">Cloud</div><div class="col-md-3">Firebase, Heroku, Google App Engine</div>
+  </div>
+  <br>  
    <div class="row">
-    <div class="col-md-2">Version Control Tools</div><div class="col-md-3">GitHub, TFS</div>
+    <div class="col-md-2">Development Tools</div><div class="col-md-3">JIRA, Teamcity, Git, Ant, Informatica, SAP Business Objects,Teradata Viewpoint, K2 SmartForms, TFS etc</div>
   </div>
 </div>
 
@@ -96,11 +100,11 @@
     <div id="menu1" class="tab-pane fade">
     <br>
       <div class="container">
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
+  <div class="panel-group" id="accordion1">
+        <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">SDSU Hometown Connect</a>
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1">Geekspad - An Android App for Tech Meetups, Recruiter Assistnace and Techie Connect</a>
         </h4>
       </div>
       <div id="collapse1" class="panel-collapse collapse in">
@@ -108,7 +112,62 @@
          <table class="table">
      <tbody>
       <tr>
-        <td> Hometown is a basically a chat application that helps students to locate people in their hometown who goes to SDSU. This app communicates with SDSU bismarck Server to retrieve students details and firebase for saving chat history.The app has 3 view options List view, Map View, Chat View (WhatsApp like View). The application is extremely fast and responsive as caching is implemented with SQLite database. Only authorized users can start a conversation. Authentication is implemented using firebase.List View displays the list of users in with their nickname, city, state and country and year of study at SDSU, clicking on a particular user in the list will start a chat with him. Map View plots all users in google map with markers, clicking on a particular marker title will start a conversation with him/her. You can also apply filters like country, state and year to locate a particular user. </td>
+        <td> An android based application for tech geeks to connect, organise meetups and other social events. What makes it really cool is that people can rate other people on their technical skills with reference to their interactions with the person at some tech event or some other means. Additionally it packs in the feature for recruiters to find the right person for a position based on skill set and percentage proficiency for each skill. Push notifications and messaging are other some additions to this app. Singleton Pattern, Factory Method Pattern, Observer Pattern and Builder Pattern are some of the design patterns used for the implementation of this application. It's backend is build with Firebase which handles authentication as well.Google Maps API used for location plotting. The current version communicate with SDSU bismarck server as this initial version targeted only SDSU students </td>
+      </tr>
+      <tr>
+        <td><u>Technologies Stack</u>
+         <br>
+       <br>
+      <div class="row">
+      <div class="col-md-2">Language</div><div class="col-md-3">Java</div>
+      </div>
+        <br>
+      <div class="row">
+      <div class="col-md-2">IDE</div><div class="col-md-3">Android Studio</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Design Patterns Used</div><div class="col-md-3">Singleton, Factory Method, Observer, Builder</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Back End</div><div class="col-md-3">FireBase(BaaS)</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Library</div><div class="col-md-3">Google Maps API, Butter Knife, Custom Services from SDSU Bismark </div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Android Version Required</div><div class="col-md-3">Android 4.4 and up</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Permissions</div><div class="col-md-3">View Contact Details, Access Internet, Location Services, Push Notifications</div>
+      </div>
+    
+      <br>
+      <div class="row">
+      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Geekspad-Android" target="_blank">Geekspad</a>
+        </td>
+      </tr>
+      </tbody>
+     </table> 
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2">SDSU Hometown Connect</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+         <table class="table">
+     <tbody>
+      <tr>
+        <td> Hometown is a basically a chat application that helps students to locate people in their hometown who goes to SDSU. This app communicates with SDSU bismarck Server to retrieve students details and firebase for saving chat history.The app has 3 view options List view, Map View, Chat View (WhatsApp like View). The application is extremely fast and responsive as data is cached in SQLite database. Only authorized users can start a conversation. Authentication is implemented using firebase.List View displays the list of users in with their nickname, city, state and country and year of study at SDSU, clicking on a particular user in the list will start a chat with him. Map View plots all users in google map with markers, clicking on a particular marker title will start a conversation with him/her. You can also apply filters like country, state and year to locate a particular user. </td>
       </tr>
       <tr>
         <td><u>Technologies Stack</u>
@@ -151,10 +210,10 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Draw & Play - A Stress Reliever App</a>
+          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3">Draw & Play - A Stress Reliever App</a>
         </h4>
       </div>
-      <div id="collapse2" class="panel-collapse collapse">
+      <div id="collapse3" class="panel-collapse collapse">
         <div class="panel-body">
         <table class="table">
      <tbody>
@@ -197,15 +256,21 @@
     
     
     <div id="menu2" class="tab-pane fade">
-      <br>
+    <br>
       <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Business Administration System</b></div>
-    <div class="panel-body">     
-    <table class="table">
+  <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Business Administration System</a>
+        </h4>
+      </div>
+      <div id="collapse12" class="panel-collapse collapse in">
+        <div class="panel-body">
+         <table class="table">
      <tbody>
       <tr>
-        <td> Modeled and programmed a business management system with MongoDB, ExpressJS, AngularJS and Node.js(MEAN Stack) . The system included functionalities for managing daily transactions, inventory management, employee management, repair ticket management and vendor order management.mLabs was chosen was the online mongoDB database for the ease of collaborative coding, Node.js functioned as the backend server, ExpressJS from npm repository was the middleware and frontend scripts and validations were handled using AngularJS. The development platform was Linux Mint and the code repository was GitHub.</td>
+        <td> Modeled and programmed a business management system with MongoDB, ExpressJS, AngularJS and Node.js(MEAN Stack) . The system included functionalities for managing daily transactions, inventory management, employee management, repair ticket management and vendor order management.mLabs was chosen was the online mongoDB database for the ease of collaborative coding, Node.js functioned as the backend server, ExpressJS from npm repository was the middleware and frontend scripts and validations were handled using AngularJS. The development platform was Linux Mint and the code repository was GitHub. </td>
       </tr>
       <tr>
         <td><u>Technologies Stack</u>
@@ -220,15 +285,15 @@
       </div>
       <br>
       <div class="row">
-      <div class="col-md-2">Back End</div><div class="col-md-3">MongoDB(mLabs)</div>
+      <div class="col-md-2">Database</div><div class="col-md-3">MongoDB(mLabs)</div>
       </div>
       <br>
       <div class="row">
-      <div class="col-md-2">Middleware Framework</div><div class="col-md-3">Express.js</div>
+      <div class="col-md-2">Middlewares</div><div class="col-md-3">Express.js, Passport.js, Body-parser, Mongoose</div>
       </div>
       <br>
       <div class="row">
-      <div class="col-md-2">Application Server</div><div class="col-md-3">Node.js</div>
+      <div class="col-md-2">Back End</div><div class="col-md-3">Node.js</div>
       </div>
       <br>
       <div class="row">
@@ -236,14 +301,63 @@
       </div>
       </div>
         </td>
-  
       </tr>
       </tbody>
-     </table>  
-     </div>
-  </div>
+     </table> 
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse22">Sync Reminder</a>
+        </h4>
+      </div>
+      <div id="collapse22" class="panel-collapse collapse">
+        <div class="panel-body">
+         <table class="table">
+     <tbody>
+      <tr>
+        <td> A Web application with standard features of a reminder/ TO-DO app inlcuding saving , updating, deleting event. What makes it different is that it uses the user's google account(mandatory to register as a user) to sync the added events and tasks to the user's google calender using google calender API and send reminder emails using Gmail. The implementation was with technologies like HTML, Bootstrap, JSP, Servlets and Presto. The goal of the project was to learn JSP and Servlet with MVC architecture. </td>
+      </tr>
+      <tr>
+        <td><u>Technologies Stack</u>
+        <br>
+       <br>
+      <div class="row">
+      <div class="col-md-2">Language</div><div class="col-md-3">JAVA</div>
+      </div>
+        <br>
+      <div class="row">
+      <div class="col-md-2">Front End</div><div class="col-md-3">JSP</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Database</div><div class="col-md-3">PostgresSQL</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Library</div><div class="col-md-3">Google Calender API, Gmail API</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">Back End</div><div class="col-md-3">Servlet</div>
+      </div>
+      <br>
+      <div class="row">
+      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Google-Sync-Reminder" target="_blank">Google Sync Calender</a>
+      </div>
+      </div>
+        </td>
+      </tr>
+      </tbody>
+     </table> 
+        </div>
+      </div>
+    </div>
+    
+  </div> 
 </div>
-
     </div>
     
     
