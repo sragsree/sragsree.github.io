@@ -1,814 +1,1907 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-  <title>Sreerag's Portfolio</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sreerag's Space - Personal Website</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="images/favicon.png" >
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/font/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/libs/materialize/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="assets/css/animate.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/sweetalert/sweet-alert.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.carousel.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.transitions.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.theme.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Choose your default colors -->
+  <link rel="stylesheet" href="assets/css/colors/color1.css">
+  <!-- <link rel="stylesheet" href="assets/css/colors/color2.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color3.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color4.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color5.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color6.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color7.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color8.css"> -->
+
+  [if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+  <![endif]
 </head>
+
 <body>
 
-<div class="jumbotron text-center">
-  <h1>Sreerag Sreenivasan</h1>
-</div>
- 
-<div class="container">
+  <!-- Preloader --> 
+    <div id="preloader">
+      <div class="loader">
+            <svg class="circle-loader" height="50" width="50">
+              <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+            </svg>
+        </div>    
+    </div><!--preloader end-->
 
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home"><h4>About</h4></a></li>
-    <li><a data-toggle="tab" href="#menu1"><h4>Android</h4></a></li>
-    <li><a data-toggle="tab" href="#menu2"><h4>Web</h4></a></li>
-    <li><a data-toggle="tab" href="#menu3"><h4>Business Intelligence</h4></a></li>
-    <li><a data-toggle="tab" href="#menu4"><h4>Security</h4></a></li>
-    <li><a data-toggle="tab" href="#menu5"><h4>Data Science</h4></a></li>
-    <li><a data-toggle="tab" href="#menu6"><h4>Embedded</h4></a></li>
-    <li><a data-toggle="tab" href="#menu7"><h4>C++</h4></a></li>
-    <li><a data-toggle="tab" href="#menu8"><h4>Publications</h4></a></li>
-    <li><a data-toggle="tab" href="#menu9"><h4>Contact</h4></a></li> 
-  </ul>
-
-  <div class="tab-content">
-  
-    <div id="home" class="tab-pane fade in active">  
-   <div class="container">
-  <h2></h2>
-  <p> A passionate software developer and techno enthusiast.</p>
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading"><b>Professional Information</b></div>
-      <div class="panel-body">
-      
+  <!-- Main Container -->
+  <main id="app" class="main-section">
+    <!-- header navigation start -->
+    <header id="navigation" class="root-sec white nav">
       <div class="container">
-  <div class="row">
-    <div class="col-md-2">Masters</div><div class="col-md-3">Computer Science</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Bachelors</div><div class="col-md-3">Electronics and Communication Engineering</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Interest</div><div class="col-md-3"> Fulfilling challenging projects & Learning new technologies</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Proficiency</div><div class="col-md-3">Full stack developer</div>
-  </div>
-  <br>
-   <div class="row">
-     <div class="col-md-2">Website</div><div class="col-md-3"><a href="http://www.sreeragsreenivasan.cf/"> http://www.sreeragsreenivasan.cf</a></div>
-   </div>      
-</div>
-      
-      </div>
-    </div>
-    
-    <div class="panel panel-default">
-      <div class="panel-heading"><b>Technical Skills</b></div>
-      <div class="panel-body">      
-  <div class="container">
-  <div class="row">
-    <div class="col-md-2">Languages</div><div class="col-md-3">Java, Python, Scala, C++, SQL, PL/SQL </div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Web</div><div class="col-md-3">HTML5, CSS3, Javascript, Node.js</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Databases</div><div class="col-md-3">Oracle, Teradata, PostgresSQL, MySql, MongoDB, SQLite</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Frameworks</div><div class="col-md-3">Spring, Hibernate, Android, Google Web Toolkit, MEAN Stack, MyBatis, Bootstrap, Backbone.js, K2 BlackPearl, K2 SmartForms, JUnit, EasyMock</div>
-  </div>
-  <br>
-    <div class="row">
-    <div class="col-md-2">Cloud</div><div class="col-md-3">Firebase, Heroku</div>
-  </div>
-  <br>  
-   <div class="row">
-    <div class="col-md-2">Development Tools</div><div class="col-md-3">JIRA, TeamCity, Git, Ant, Informatica, SAP Business Objects, Sharepoint, Visual Studio, Ant, Teradata Viewpoint, TFS</div>
-  </div>
-</div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
+              <nav class="primary-nav">
+                <div class="clearfix nav-wrapper">
+                  <a href="#home" class="left brand-logo menu-smooth-scroll" data-section="#home"><img src="images/logo.png" alt="">
+                  </a>
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                  <ul class="right static-menu">
+<!--
+                    <li class="search-form-li">
+                      <a id="initSearchIcon" class=""><i class="mdi-action-search"></i> </a>
+                      <div class="search-form-wrap hide">
+                        <form action="#" class="">
+                          <input type="search" class="search">
+                          <button type="submit"><i class="mdi-action-search"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+-->
+                <!--    <li>
+                      <a class="dropdown-button blog-submenu-init" href="#!" data-activates="dropdown1">
+                        <i class="mdi-navigation-more-vert right"></i>
+                      </a>
+                    </li> -->
+                  </ul>
+                  <ul class="inline-menu side-nav" id="mobile-demo">
 
-</div>
-    </div>
-    
-  </div>
-</div>
-      
-    </div>
-    
-    
-    <div id="menu1" class="tab-pane fade">
-    <br>
-      <div class="container">
-  <div class="panel-group" id="accordion1">
-        <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1">Geekspad - An Android App for Tech Meetups, Recruiter Assistnace and Techie Connect</a>
-        </h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse in">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> An android based application for tech geeks to connect, organise meetups and other social events. What makes it really cool is that people can rate other people on their technical skills with reference to their interactions with the person at some tech event or some other means. Additionally it packs in the feature for recruiters to find the right person for a position based on skill set and percentage proficiency for each skill. Push notifications and messaging are other some additions to this app. Singleton Pattern, Factory Method Pattern, Observer Pattern and Builder Pattern are some of the design patterns used for the implementation of this application. It's backend is build with Firebase which handles authentication as well.Google Maps API used for location plotting. The current version communicate with SDSU bismarck server as this initial version targeted only SDSU students </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Java</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">IDE</div><div class="col-md-3">Android Studio</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Design Patterns Used</div><div class="col-md-3">Singleton, Factory Method, Observer, Builder</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Back End</div><div class="col-md-3">FireBase(BaaS)</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Libraries</div><div class="col-md-3">Google Maps API, Butter Knife, Custom Services from SDSU Bismark </div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Android Version Required</div><div class="col-md-3">Android 4.4 and up</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Permissions</div><div class="col-md-3">View Contact Details, Access Internet, Location Services, Push Notifications</div>
-      </div>
-    
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Geekspad-Android" target="_blank">Geekspad</a>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2">SDSU Hometown Connect</a>
-        </h4>
-      </div>
-      <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> Hometown is a basically a chat application that helps students to locate people in their hometown who goes to SDSU. This app communicates with SDSU bismarck Server to retrieve students details and firebase for saving chat history.The app has 3 view options List view, Map View, Chat View (WhatsApp like View). The application is extremely fast and responsive as data is cached in SQLite database. Only authorized users can start a conversation. Authentication is implemented using firebase.List View displays the list of users in with their nickname, city, state and country and year of study at SDSU, clicking on a particular user in the list will start a chat with him. Map View plots all users in google map with markers, clicking on a particular marker title will start a conversation with him/her. You can also apply filters like country, state and year to locate a particular user. </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Java</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">IDE</div><div class="col-md-3">Android Studio</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Back End</div><div class="col-md-3">FireBase and SQLite(for caching)</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Libraries</div><div class="col-md-3">Google Maps API</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Android Version Required</div><div class="col-md-3">Android 4.4 and up</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Permissions</div><div class="col-md-3">View Contact Details, Access Internet</div>
-      </div>
-    
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/SDSU-Hometown-Chat" target="_blank">SDSU Hometown Connect</a>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3">Draw & Play - A Stress Reliever App</a>
-        </h4>
-      </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">
-        <table class="table">
-     <tbody>
-      <tr>
-        <td> The days of simple swiping through the menu of your smartphone is over. This magical android application helps you to relieve your stress by allowing you to draw circles of different sizes on the screen and set them in motion. The application basically has 3 modes Insert, delete and Move. In Insert mode, you can draw circles of different sizes on the screen. Delete mode allows you to delete any circle on the screen when you touch them. Move mode sets these circles in motion when you swipe over them with a certain velocity. They collide at the edge of the screen or collide each other to bounce back. The bounce angle is determined by applying laws of physics and each circle loses a certain velocity when they collide each other or with the edge of the screen. How does it help to relieve stress? Rather than swiping through the menu you can draw multiple circles and make them move in different directions. Studies have proven that this kind of apps in mobile are equivalent to stress relief balls. </td>
-      </tr>
-      <tr>
-       <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Java</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">IDE</div><div class="col-md-3">Android Studio</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Android Version Required</div><div class="col-md-3">Android 4.4 and up</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Permissions</div><div class="col-md-3">No Permissions Required</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Draw-Play" target="_blank">Draw & Play</a>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-     </div>
-      </div>
-      </div>
-      <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion1" href="#collapse4">Go Sport - An App to Follow, Meet And Play Sporting Games</a>
-        </h4>
-      </div>
-      <div id="collapse4" class="panel-collapse collapse">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> Go Sport is an Java based application developed in android framework that locates the the people in a particular area in Google Maps who are interested in the same sport as the user.It also helps users to setup local matches and welcome interested people in the locality to take part in it. The app also hosts an open platform for people to chat.
-       </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Java</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">IDE</div><div class="col-md-3">Android Studio</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">REST Services</div><div class="col-md-3">Node.js</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Back End</div><div class="col-md-3">Heroku(host) and MySQL(database)</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Libraries</div><div class="col-md-3">Google Maps API, Google Web Toolkit</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Android Version Required</div><div class="col-md-3">Android 4.2 and up</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Permissions</div><div class="col-md-3">View Contact Details, Access Internet, Location Services, Push Notifications</div>
-      </div>
-    
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Go-Sport" target="_blank">Go Sport</a>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-        </div>
-      </div>
-    </div> 
-  </div> 
-</div>
-    </div>
-    
-    
-    <div id="menu2" class="tab-pane fade">
-    <br>
-      <div class="container">
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse02">Used Book Website For SDSU Library</a>
-        </h4>
-      </div>
-      <div id="collapse02" class="panel-collapse collapse in">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> The key idea behind this project is to develop a website for students to rent or purchase used books. The scope of this project is to develop a full working prototype. This will provide a platform for students to make the best out of their old books if they are not longer using it. The project is divided into 2 parts<br>
-        <ul type="disc">
-        <li>One is a portal with admin privilages that manages the inventory (used books).</li>
-        <li>Second one is the actual store like portal through which students can rent/buy books.</li>
-    </ul> 
-    The website implements a web scraping logic to determine the price of each book by looking into some of the popular book inventory websites. This self determined prices can be manipulated through the admin portal. The targeting audience for this initial version of this website are students of San Diego State University. </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-        <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Java</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">Front End</div><div class="col-md-3">HTML5, CSS3, Angular 5</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Database</div><div class="col-md-3">MySQL</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Framworks</div><div class="col-md-3">Spring 4, Hibernate, Redis(cache)</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Server</div><div class="col-md-3">Tomcat</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/UsedBookWebsite" target="_blank">Used Book Website for SDSU Library</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-        </div>
-      </div>
-    </div>
-        <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Business Administration System</a>
-        </h4>
-      </div>
-      <div id="collapse12" class="panel-collapse collapse">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> Modeled and programmed a business management system with MongoDB, ExpressJS, AngularJS and Node.js(MEAN Stack) . The system included functionalities for managing daily transactions, inventory management, employee management, repair ticket management and vendor order management.mLabs was chosen was the online mongoDB database for the ease of collaborative coding, Node.js functioned as the backend server, ExpressJS from npm repository was the middleware and frontend scripts and validations were handled using AngularJS. The development platform was Linux Mint and the code repository was GitHub. </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-        <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Javascript and HTML</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">Front End</div><div class="col-md-3">HTML5, CSS3, Angular.js</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Database</div><div class="col-md-3">MongoDB(mLabs)</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Middlewares</div><div class="col-md-3">Express.js, Passport.js, Body-parser, Mongoose</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Back End</div><div class="col-md-3">Node.js</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Business-Administration-System" target="_blank">Business Administration System</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse22">Sync Reminder</a>
-        </h4>
-      </div>
-      <div id="collapse22" class="panel-collapse collapse">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> A Web application with standard features of a reminder/ TO-DO app inlcuding saving , updating, deleting event. What makes it different is that it uses the user's google account(mandatory to register as a user) to sync the added events and tasks to the user's google calender using google calender API and send reminder emails using Gmail. The implementation was with technologies like HTML, Bootstrap, JSP, Servlets and Presto. The goal of the project was to learn JSP and Servlet with MVC architecture. </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-        <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">JAVA</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">Front End</div><div class="col-md-3">JSP</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Database</div><div class="col-md-3">PostgresSQL</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Libraries</div><div class="col-md-3">Google Calender API, Gmail API</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Back End</div><div class="col-md-3">Servlet</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Google-Sync-Reminder" target="_blank">Google Sync Reminder</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table> 
-        </div>
-      </div>
-    </div>
-    
-  </div> 
-</div>
-    </div>
-    
-    
-    <div id="menu3" class="tab-pane fade">
-    <br>
-  <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>ETL and Data analyis with Telecom System data set</b></div>
-    <div class="panel-body">
-    <table class="table">
-     <tbody>
-      <tr>
-        <td> Analyzed and designed Mapplets in Informatica to cleanse and pull data from application database to staging area and then to the data warehouse. Some extra information required for BI analysis were imported from flat files. The dashboard and various reports were generated from data mart and data warehouse data using SAP Business Objects. Various chasm traps and fan traps that occurred because of data quality issues were resolved to produce highly informative ad-hoc reports and dashboards.</td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">SQL</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">ETL Tools</div><div class="col-md-3">Informatica PowerCenter 9.5.1</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Reporting Tool</div><div class="col-md-3">SAP Business Objects XI</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Telecom-System-ETL-Project" target="_blank">ETL and Reporting Project</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-    </div>
-  </div>
-</div>
-  <div id="menu4" class="tab-pane fade">
-  <br>
-  <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Multi-Level Imperceptible encryption algorithm</b></div>
-    <div class="panel-body">
-    <table class="table">
-     <tbody>
-      <tr>
-        <td> A comparative study of encryption algorithms by implementing encoders and decoders for different algorithms like LSB coding, Parity coding, Phase coding, Echo coding and Spread Spectrum coding to hide images behind audio signals. Their performances were evaluated in terms of Signal to Noise Ratios(SNR). Developed a multi-level imperceptible coding algorithm that is better than the above algorithms in terms of SNR using the same set of data and audio signal. This new algorithm was proved to enhance the performance of computers that works in a network that deals with a lot of encrypted data.</td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Tool</div><div class="col-md-3">MATLAB</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">Accuracy</div><div class="col-md-3">96%</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Concepts</div><div class="col-md-3">Stegnography, Signal to Noise Ratio etc..</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Multi-Level-Imperceptible-Encryption-Algorithm" target="_blank">Multi-Level Imperceptible encryption algorithm</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-    </div>
-  </div>
-</div>
-<div id="menu5" class="tab-pane fade">
-    <br>
-    <div class="container">
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse51">IMDB Movie Dataset</a>
-        </h4>
-      </div>
-      <div id="collapse51" class="panel-collapse collapse in">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> This project is about performing a comprehensive analysis of IMDB movie dataset to predict the success rate of movies using popular machine learning concept and then comparing the results. Visualisation in various perspectives to anaylse the trend is also under the scope of this project. The project uses K-nearest neighbour, AdaBoost, SVM (Support Vector Machine), Naive Bayes Classifier and Logistic Regression</td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Python</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">Library</div><div class="col-md-3">Sklearn, Ploty, Matplot</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Evaluation Parameters</div><div class="col-md-3">Confusion Matrix, Accuracy, Precision, Recall, ROC and AUC</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Dataset Source </div><div class="col-md-3">Kaggle</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/IMDB-Movie-Data-Prediction-Analysis" target="_blank">IMDB Movie Success - Prediction & Analysis</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse52">Automotive Crash Worthiness Data System Analysis</a>
-        </h4>
-      </div>
-      <div id="collapse52" class="panel-collapse collapse">
-        <div class="panel-body">
-         <table class="table">
-     <tbody>
-      <tr>
-        <td> The goal of the project was to predict the chances of survival in road accidents using various machine learning models of spark data frames and RDDs . We also wanted to analyze the influence of airbag, seatbelts etc in safety of drivers and passengers in a vehicle.The dataset was found to be a highly imbalanced one and hence we extended our project to different case studies to see how Data frame and RDD ML models handle this scenarios.<br/>
-        <br/>
-        CASE STUDY 1: Data frame ML Models with default hyper parameter - To show that data is imbalanced<br/>
-        CASE STUDY 2: Data frame ML Models with tweeted Hyper parameter - to handle imbalanced data<br/>
-        CASE STUDY 3: RDD based ML models with tweeted Hyper parameter - to handle imbalanced data ANALYSIS on THE DATA SET. </td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Scala</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">Framework/Library</div><div class="col-md-3">Data frame & RDD based Spark ML libraries</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Models used</div><div class="col-md-3">Logistic Regression, Decision Tree, Random Forest, Gradient-Boosted Tree, Naive Bayes and Linear SVM</div>
-      </div>
-      <br>
-      <div class="row">
-       <div class="col-md-2">Dataset Source</div><div class="col-md-3"><a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html" target="_blank">NASS_CDS_Dataset</a></div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Disaster-Survival" target="_blank">NASS CDS Dataset Analysis</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-      </div>
-    </div> 
-  </div> 
-</div>
-    </div>
-      
-      <div id="menu6" class="tab-pane fade">
-  <br>
-  <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Low Cost Robotic Palm with Arduino </b></div>
-    <div class="panel-body">
-    <table class="table">
-     <tbody>
-      <tr>
-        <td> A low-cost implementation of a robotic palm that replicated all the gestures of a human hand. To keep the cost down, the mechanical palm was made with recyclable plastics and homemade etching was followed to design the circuits. Arduino, an embedded unit was used as the controller. Flex Sensors provided input for the Arduino and servo motors were fed with digital outputs from Arduino to mimic the gestures. The Arduino that detected the human gestures and the other Arduino that drove the servo motors communicated wirelessly using ZigBee protocol. An attempt to interface two Arduinos through the Internet by using ZigBee gateway controller modules and TCP/IP protocols was also done as part of this project.</td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">Embedded C</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">IDE</div><div class="col-md-3">Arduino IDE</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Accuracy</div><div class="col-md-3">90%</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Robotic-Palm-with-Arduino" target="_blank">Low Cost Robotic Palm with Arduino</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-    </div>
-  </div>
-</div>
-      
-      <div id="menu7" class="tab-pane fade">
-  <br>
-  <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Stock Management System</b></div>
-    <div class="panel-body">
-    <table class="table">
-     <tbody>
-      <tr>
-        <td> A C++ application developed in DosBox to manage stocks details in a supermarket. It included features for adding product details on new stock arrival, displaying product details, Searching for a particular product, updating product details, deleting product details, recording details of daily transactions, automatic updating and analysis of inventory based on stock and daily transaction details. This project was recognized at Inter District IT project competition with the first prize.</td>
-      </tr>
-      <tr>
-        <td><u>Technologies Stack</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Language</div><div class="col-md-3">C++</div>
-      </div>
-        <br>
-      <div class="row">
-      <div class="col-md-2">IDE</div><div class="col-md-3">DosBox</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Datastore</div><div class="col-md-3">Flat files</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">GitHub Link</div><div class="col-md-3"><a href="https://github.com/sragsree/Stock-Management-System" target="_blank">Stock Management System</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-    </div>
-  </div>
-</div>
-      
-       <div id="menu8" class="tab-pane fade">
-  <br>
-  <div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Biomorphic Palm with Arduino</b></div>
-    <div class="panel-body">
-    <table class="table">
-     <tbody>
-      <tr>
-        <td> A mechanical palm that replicated all the gestures of a human hand using Arduino(Embedded System). At the transmitter, inputs were read from flex sensors and serialized it before transmitted it with ZigBee module. At the receiver, data was deserialized and passed to servo motors which rotated accordingly to imitate the gestures.</td>
-      </tr>
-      <tr>
-        <td><u>Publication Details</u>
-         <br>
-       <br>
-      <div class="row">
-      <div class="col-md-2">Journal Name</div><div class="col-md-3">International Journal for Innovative Research in Science & Technology</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Authors</div><div class="col-md-3"> Sreerag S; Rahul. R. Nair; Vishnu K.; Vishnu S. Dev</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Keywords</div><div class="col-md-3">Biomorphic Palm, Arduino, Microcontoller, UNO R3, Xbee, Servo Motors</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Other Details</div><div class="col-md-3">Volume:2, Issue:6 (Dec.2015) pp.54–59. IJIRST, 2015</div>
-      </div>
-      <br>
-      <div class="row">
-      <div class="col-md-2">Publication Link</div><div class="col-md-3"><a href="http://ijirst.org/Article.php?manuscript=IJIRSTV2I6027" target="_blank">Biomorphic Palm with Arduino</a>
-      </div>
-      </div>
-        </td>
-      </tr>
-      </tbody>
-     </table>  
-     </div>
-    </div>
-  </div>
-</div>
+                  <!-- Mini Profile // only visible in Tab and Mobile -->
+                    <li class="mobile-profile">
+                     <div class="profile-inner">
+                        <div class="pp-container">
+                            <img src="images/person.png" alt="">
+                        </div>
+                        <h3>Sreerag</h3>
+                        <h5>Software Engineer</h5>
+                      </div>
+                    </li><!-- mini profile end-->
 
-  
-    <div id="menu9" class="tab-pane fade">
-    <br>
-    <div class="container">
-    <div class="panel panel-default">
-      <div class="panel-heading"><b>Reach Me Here</b></h5></div>
-      <div class="panel-body">
-      
-  <div class="row">
-    <div class="col-md-2">Address</div><div class="col-md-3">6545 Montezuma Road,  San Diego, CA.</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Phone</div><div class="col-md-3">(619)-416-6753</div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Email</div><div class="col-md-3"><a href="mailto:ssreenivasan@sdsu.edu">ssreenivasan@sdsu.edu</a><br></div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Linkedin</div><div class="col-md-3"><a href="https://www.linkedin.com/in/ssreerag/" target="_blank">https://www.linkedin.com/in/ssreerag</a></div>
-  </div>
-  <br>
-   <div class="row">
-    <div class="col-md-2">Website</div><div class="col-md-3"><a href="http://www.sreeragsreenivasan.ml/" target="_blank">http://www.sreeragsreenivasan.ml</a></div>
-  </div>
-</div>
-      
-  </div>
-  
-</div> 
-</div>
+
+                    <li><a href="#about" data-section="#about" class="menu-smooth-scroll"><i class="fa fa-user fa-fw"></i>About Me</a>
+                    </li>
+                    <li><a href="#resume" data-section="#resume" class="menu-smooth-scroll"><i class="fa fa-file-text fa-fw"></i>Skills</a>
+                    </li>
+                    <li><a href="#portfolio" data-section="#portfolio" class="menu-smooth-scroll"><i class="fa fa-briefcase fa-fw"></i>Portfolio</a>
+                    </li>
+                    <li><a href="#certifications" data-section="#certifications" class="menu-smooth-scroll"><i class="fa fa-users fa-fw"></i>Certifications</a>
+                    </li>
+                    <li><a href="#testimonial" data-section="#testimonial" class="menu-smooth-scroll"><i class="fa fa-comments fa-fw"></i>Testimonial</a>
+                    </li>
+<!--
+                   <li><a href="#blog" data-section="#blog" class="menu-smooth-scroll"><i class="fa fa-pencil fa-fw"></i>Blog</a>
+                    </li>
+-->
+                    <li><a href="#contact" data-section="#contact" class="menu-smooth-scroll"><i class="fa fa-paper-plane fa-fw"></i>Contact</a>
+                    </li>
+                  </ul>
+            <!--    <ul id="dropdown1" class="inline-menu submenu-ul dropdown-content">
+                    <li>Home</li>
+                    <li><a href="blog.html">All Blog</a>
+                    </li>
+                    <li><a href="blog-with-sidebar.html">Blog with Sidebar</a>
+                    </li>
+                    <li><a href="single.html">Single Blog</a>
+                    </li>
+                  </ul> -->
+
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </header>
+    <!-- #header  navigation end -->
+
+    <!-- Home Section start -->
+    <section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
+      <div class="sec-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-inner">
+                  <div class="center-align home-content">
+                    <h1 class="home-title">HI! I'm <span>Sreerag</span></h1>
+                    <h2 class="home-subtitle">Software Engineer from Seattle, Washington</h2>
+                    <a href="#contact" class="hire-me-btn btn waves-effect waves-light btn-large brand-bg white-text regular-text">Reach Me <i class="mdi-content-send left"></i>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container end -->
+        <div class="section-call-to-area">
+          <div class="container">
+            <div class="row">
+              <a href="#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#about">
+                <i class="mdi-navigation-expand-more"></i>
+              </a>
+            </div>
+          </div>
+          <!-- .container end -->
+        </div>
+      </div>
+    </section>
+    <!-- #home Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="scroll-section root-sec padd-tb-60 grey lighten-5 about-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix about-inner">
+
+            <div class="col-sm-12 col-md-4">
+              <div class="person-about">
+                <h3 class="about-subtitle">My Story</h3>
+                <p>'A Techno Enthusiast' is the most concise description about myself. As a Software Engineer, providing software-business       solutions with cutting edge technologies is not just a job for me, it's my passion. I always welcome challenging assignments and make sure that I leave no stone unturned before arriving at an optimal solution. 
+                    <br/>
+                    As a full stack developer, I am keenly interested in  Cloud, Open Stack, The Web, Mobile Apps, and Databases. Colleagues know me as a highly creative developer with excellent problem-solving skills who can always be trusted to come up with a new approach. But I know that the client’s business comes first, and I never try to impose my ideas on others. Instead, I spend a lot of time understanding the business and the audience before suggesting ideas. I can (and often do) work well alone, but I’m at my best collaborating with others. I actively attend tech meetups as and when I get an opportunity.
+                    </p>.
+                <a href="https://drive.google.com/file/d/1-AjLjPyYuDjJztvpVlhH9URajxP5p2N-/view?usp=sharing" class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a>
+              </div>
+            </div>
+            <!-- about me description -->
+
+            <div class="col-sm-6 col-md-4">
+              <div class="person-img wow fadeIn">
+                <img class="z-depth-1" src="images/person.jpeg" alt="">
+              </div>
+            </div>
+            <!-- about me image -->
+
+            <div class="col-sm-6 col-md-4">
+              <div class="person-info">
+                <h3 class="about-subtitle">Personal Information</h3>
+                <h5><span>Name :</span> Sreerag Sreenivasan</h5>
+                <h5><span>Age :</span> 32 Years</h5>
+                <h5><span>Phone :</span> +1-619-416-6753</h5>
+                <h5><span>Email :</span> srag.sree@gmail.com</h5>
+                <h5><span>Address :</span> Seattle, Washington, United States</h5>
+              </div>
+
+              <div class="about-social">
+                <ul>
+                  <li>
+                    <a href="http://facebook.com/srag.sree" class="btn-floating waves-effect waves-light white"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://plus.google.com/111952949672144442869" class="btn-floating waves-effect waves-light white"><i class="fa fa-google-plus"></i></a>
+                   </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/sreeragsreeni/" class="btn-floating waves-effect waves-light white"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/s.sreerag_/" class="btn-floating waves-effect waves-light white"><i class="fa fa-instagram"></i></a>
+                  </li>
+                    <li>
+                    <a href="https://github.com/sragsree" class="btn-floating waves-effect waves-light white"><i class="fa fa-github"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- about me info -->
+
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </section>
+    <!-- #about Section end -->
+
+    <!-- Resume Section start -->
+    <section id="resume" class="scroll-section ">
+      <section id="skill" class="root-sec white skill-wrap">
+      <div class="sec-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="clearfix skill-inner">
+              <div class="col-sm-12 col-md-3">
+                <div class="skill-left">
+                  <h2 class="title">Skills</h2>
+                  <p class="regular-text">"Only those who have patience to do simple things perfectly ever acquire the skill to do difficult things easily"</p> <br> <p align = "right">- James J.Corbett </p>
+                </div>
+              </div>
+
+              <!-- skills container -->
+              <div class="col-sm-12 col-md-6 col-md-offset-1">
+                <div class="skill-right">
+                  <div id="skillSlider" class="clearfix skill-graph">
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Java</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Spring</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill--> 
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Go</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Docker</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill--> 
+
+                     <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="80%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Kubernetes</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">80%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Scala</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                    
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">PostgresSQL</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->  
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Python</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill--> 
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">MongoDB</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill--> 
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">EasyMock</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->  
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">HTML5</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">CSS3</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single skill -->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Bootstrap</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                    
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">JavaScript</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill--> 
+                    
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Node.js</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Teradata</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">OracleDB</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->  
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Hibernate</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Android</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Backbone.js</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">JUnit</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->   
+                      
+                      <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Firebase</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->    
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">C++</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">PL/SQL</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">SQLite</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->  
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Scripting</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">MEAN Stack</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                     <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">K2Smartforms</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                    
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">K2BlackPearl</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->  
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="90%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Informatica</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">90%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="85%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">SAP-BO</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill--> 
+                      
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="95%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Git</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">95%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->  
+
+                    <!-- single skill -->
+                  </div>
+                </div>
+              </div>
+              <!-- /skills container -->
+            </div>
+          </div>
+          <div class="btn-wrapp skl-ctrl">
+            <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-left"><i class="mdi-navigation-chevron-left "></i></a>
+            <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-right"><i class="mdi-navigation-chevron-right "></i></a>
+          </div>
+        </div>
+      </div>
+        <!-- .container end -->
+      </section>
+
+      <section id="experience" class="root-sec padd-tb-120 brand-bg experience-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="experience-inner">
+              <div class="col-sm-12 col-md-10 card-box-wrap">
+                <div class="row">
+                  <div class="clearfix section-head experience-text">
+                    <div class="col-sm-12">
+                      <h2 class="title">Experience</h2>
+                      <p class="regular-text">"A true professional not only follows but loves the processes, policies and principles set by his profession" </p> <br> <p align = "right"> - Amit Kalantri, Wealth of Words</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="overflow-hidden">
+                      <div class="row">
+                        <div id="experienceSlider" class="clearfix card-element-wrapper">
+                            <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                              <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">July 2022 - Present</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="images/freelancer.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Software Engineer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Freelancer</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Software Engineer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Freelancer</p>
+                                </div>
+                                <p class="rev-content">
+                                    Researching on Autonomous Database.Pioneering REST APIs with Spring, Hibenate, PostgresSQL & integrating with AWS pipelines ensuring 85% code coverage with mock test cases.<br/>  
+                                    Revamping Legacy system to improve performace and security with latest technology stack.<br/>
+                                    Developing High Availability (HA) features to increase data availability by 100% across SQL databases and redesigning the front-end portlet to manage & monitor system performance
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">  
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">May 2017 - July 2022</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="images/teradata-emblem.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Software Engineer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Teradata</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Software Engineer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Teradata</p>
+                                </div>
+                                <p class="rev-content">
+                                    Researching on Autonomous Database.Pioneering REST APIs for Teradata Data Labs with Spring, Hibenate, PostgresSQL & integrating with Teradata  hybrid cloud ensuring 85% code coverage with mock test cases.<br/>  
+                                    Revamping Multiple Hash Map Manager feature to reduce system down time from 9-10 hours to just a few minutes while scaling database systems.<br/>
+                                    Developing High Availability (HA) features to increase data availability by 100% across Teradata databases and redesigning the front-end portlet to manage & monitor HA servers.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">September 2014 - July 2016</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="images/tata-logo.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Software Engineer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Tata Consultancy Services</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">System Administrator/Developer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Tata Consultancy Services</p>
+                                </div>
+                                <p class="rev-content">
+                                    Assisted in upgrading development environment, server setup for acceptance test & code
+                                        migration, which aided in improving the customer satisfaction. <br>
+                                    Assembled an application to alter the refresh rate of Active Directories using K2 API functions
+                                        to accelerate testing by 40% <br>
+                                    Devised techniques to overcome a few limitations of K2 SmartForms with client side scripting
+                                        using JavaScript and Jquery subsequently decreased the defect count by 60%
+                                  </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">September 2014 - August 2015</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="images/tata-logo.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Application Developer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Tata Consultancy Services</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Application Developer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Tata Consultancy Services</p>
+                                </div>
+                                <p class="rev-content">
+                                  Operated in Agile and Scrum framework for business workflow automation with K2 BPM
+                                    workflows, SmartBox Services and Custom Service Brokers to minimize 50% operational cost.<br>
+                                    Built User Interfaces (UI) with K2 SmartForms and hosted in Microsoft SharePoint using
+                                    iframes to decrease the response time from 12 seconds to 2 seconds.
+                                    Programmed RESTful web services & assembled it with K2 SmartObjects to connect
+                                    warehouse repository and application database to improve the system performance by 80%. 
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+<!--
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">January 2014 - Present</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="http://placehold.it/400x300" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Android One</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Android One</p>
+                                </div>
+                                <p class="rev-content">
+                                  Collaboratively initiate collaborative schemas for high-quality communities. Objectively create sticky relationships via team building outsourcing. 
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">January 2014 - Present</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="http://placehold.it/400x300" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Windows Phone</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Windows Phone</p>
+                                </div>
+                                <p class="rev-content">
+                                  Collaboratively initiate collaborative schemas for high-quality communities. Objectively create sticky relationships via team building outsourcing. 
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">January 2014 - Present</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="http://placehold.it/400x300" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Windows Phone</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Windows Phone</p>
+                                </div>
+                                <p class="rev-content">
+                                  Collaboratively initiate collaborative schemas for high-quality communities. Objectively create sticky relationships via team building outsourcing. 
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!--
+              <div class="btn-wrapp exp-ctrl">
+                <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="mdi-navigation-chevron-left brand-text"></i></a>
+                <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="mdi-navigation-chevron-right brand-text"></i></a>
+              </div>
+-->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="root-sec grey lighten-5 padd-tb-120 education-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="education-inner">
+              <div class="col-sm-12 col-md-10 card-box-wrap">
+                <div class="row">
+                  <div class="clearfix section-head education-text">
+                    <div class="col-sm-12">
+                      <h2 class="title">education</h2>
+                      <p class="regular-text">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today."</p> <br> <p align = "right">- Malcolm X</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="overflow-hidden">
+                      <div class="row">
+                        <div id="educationSlider" class="clearfix card-element-wrapper">
+
+                        <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2016 - 2018</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="images/sdsu.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Master of Science<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>San Diego State University</p>
+                              </div>
+                              <!-- Reveal content-->
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Master of Science<i class="mdi-navigation-close right"></i></span>
+                                  <p>San Diego State University</p>
+                                </div>
+                                <p class="rev-content">
+                                  Majored in Computer Science 
+                                </p>
+                              </div>
+                            </div>
+                          </div> <!-- single education end -->
+
+                          <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2010 - 2014</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="images/calicut.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Bachelor of Technology<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>University of Calicut University</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Bachelor of Technology<i class="mdi-navigation-close right"></i></span>
+                                  <p>University of Calicut</p>
+                                </div>
+                                <p class="rev-content">
+                                  Majored in Electronics and Communication Engineering. 
+                                </p>
+                              </div>
+                            </div>
+                          </div> <!-- single education -->
+
+                        <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2008 - 2010</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="images/bms.png" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Pre-University<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Bharathamatha HSS</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Pre-University<i class="mdi-navigation-close right"></i></span>
+                                  <p>Bharathamatha HSS</p>
+                                </div>
+                                <p class="rev-content">
+                                  Computer Science and Mathematics as main stream. 
+                                </p>
+                              </div>
+                            </div>
+                          </div> <!-- single education -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!--
+              <div class="btn-wrapp edu-ctrl">
+                <a class="btn-floating waves-effect waves-light btn-large brand-bg go go-left"><i class="mdi-navigation-chevron-left"></i></a>
+                <a class="btn-floating waves-effect waves-light btn-large brand-bg go go-right"><i class="mdi-navigation-chevron-right"></i></a>
+              </div>
+-->
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- #resume Section end -->
+
+    <!-- Portfolio Section start -->
+    <section id="portfolio" class="scroll-section root-sec white portfolio-wrap">
+      <div class="padd-tb-120 brand-bg portfolio-top">
+        <div class="portfolio-inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title">PORTFOLIO</h2>
+                <ul class="inline-menu clearfix portfolio-category" id="portfolio-msnry-sort">
+                  <li class="active"><a href="#" data-target="*">All</a>
+                  </li>
+                  <li><a href="#" data-target=".category-1">Web</a>
+                  </li>
+                  <li><a href="#" data-target=".category-2">Android</a>
+                  </li>
+                  <li><a href="#" data-target=".category-3">Data Science</a>
+                  </li>
+                  <li><a href="#" data-target=".category-4">Security</a>
+                  </li>
+                  <li><a href="#" data-target=".category-5">Business Intelligence</a>
+                  </li>
+                  <li><a href="#" data-target=".category-6">Embedded</a>
+                  </li>
+                  <li><a href="#" data-target=".category-7">C++</a>
+                  </li>
+                  <li><a href="#" data-target=".category-8">Publications</a>
+                  </li>    
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container end -->
+      </div>
+      <div id="portfolioModal" class="modal white">
+        <div class="model-img"></div>
+        <div class="modal-content">
+          <h2 class="title">This is my Portfolio</h2>
+          <p class="m-content">This showcases my work</p>
+        </div>
+
+        <div class="modal-footer">
+          <a href="http://bdinfosys.com/demo/?item=materialx" target="_blank" class="waves-effect btn-flat brand-text modal-action">More Details</a>
+          <a href="#" class="waves-effect btn-flat brand-text modal-action modal-close">cancel</a>
+        </div>
+      </div>
+
+      <div class="portfolio-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="clearfix protfolio-item" id="protfolio-msnry">
+
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-1">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/used_book1.jpg" data-title="Used Book Website for SDSU Library" data-content="The key idea behind this project is to develop a website for students to rent or purchase used books. The scope of this project is to develop a full working prototype. This will provide a platform for students to make the best out of their old books if they are not longer using it. The project is divided into 2 parts
+                  One is a portal with admin privilages that manages the inventory (used books).
+                  Second one is the actual store like portal through which students can rent/buy books.
+                  The website implements a web scraping logic to determine the price of each book by looking into some of the popular book inventory websites. This self determined prices can be manipulated through the admin portal. The targeting audience for this initial version of this website are students of San Diego State University." data-demo-link="https://github.com/sragsree/UsedBookWebsite"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/used_book.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Used Book Website for SDSU Library</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+              
+              <!-- Single Portfolio-->
+                <li class="single-port-item category-1">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/mean1.png" data-title="Business Administration System with MEAN Stack" data-content="Modeling and programming of a business management system with MongoDB, ExpressJS, AngularJS and Node.js(MEAN Stack) . The system will include functionalities for managing daily transactions, inventory management, employee management, repair ticket management and vendor order management.The development platform is Linux Mint and the code repository is GitHub." data-demo-link="https://github.com/sragsree/Business-Administration-System"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/mean.png" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Business Administration System with MEAN Stack</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                  
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-1">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/sync1.png" data-title="Google Sync Reminder" data-content="A Web application with standard features of a reminder/ TO-DO app inlcuding saving , updating, deleting event. What makes it different is that it uses the user's google account(mandatory to register as a user) to sync the added events and tasks to the user's google calender using google calender API and send reminder emails using Gmail. The implementation was with technologies like HTML, Bootstrap, JSP, Servlets and Presto. The goal of the project was to learn JSP and Servlet with MVC architecture." data-demo-link="https://github.com/sragsree/Google-Sync-Reminder"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/sync.png" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Google Sync Reminder</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                  
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-2">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/geeklink1.jpg" data-title="Geekspad - An Android App for Tech Meetups, Recruiter Assistnace and Techie Connect" data-content="An android based application for tech geeks to connect, organise meetups and other social events. What makes it really cool is that people can rate other people on their technical skills with reference to their interactions with the person at some tech event or some other means. Additionally it packs in the feature for recruiters to find the right person for a position based on skill set and percentage proficiency for each skill. Push notifications and messaging are other some additions to this app. Singleton Pattern, Factory Method Pattern, Observer Pattern and Builder Pattern are some of the design patterns used for the implementation of this application. It's backend is build with Firebase which handles authentication as well.Google Maps API used for location plotting. The current version communicate with SDSU bismarck server as this initial version targeted only SDSU students" data-demo-link="https://github.com/sragsree/Geekspad-Android"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/geeklink.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Geekspad</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-2">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/connect1.png" data-title="SDSU Home Connect" data-content="Hometown is a basically a chat application that helps students to locate people in their hometown who goes to SDSU. This app communicates with SDSU bismarck Server to retrieve students details and firebase for saving chat history.The app has 3 view options List view, Map View, Chat View (WhatsApp like View). The application is extremely fast and responsive as data is cached in SQLite database. Only authorized users can start a conversation. Authentication is implemented using firebase.List View displays the list of users in with their nickname, city, state and country and year of study at SDSU, clicking on a particular user in the list will start a chat with him. Map View plots all users in google map with markers, clicking on a particular marker title will start a conversation with him/her. You can also apply filters like country, state and year to locate a particular user." data-demo-link="https://github.com/sragsree/SDSU-Hometown-Chat"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/connect.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">SDSU Home Connect</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                  
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-2">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/stress.jpg" data-title="Draw & Play - A Stress Reliever App" data-content="
+                  The days of simple swiping through the menu of your smartphone is over. This magical android application helps you to relieve your stress by allowing you to draw circles of different sizes on the screen and set them in motion. The application basically has 3 modes Insert, delete and Move. In Insert mode, you can draw circles of different sizes on the screen. Delete mode allows you to delete any circle on the screen when you touch them. Move mode sets these circles in motion when you swipe over them with a certain velocity. They collide at the edge of the screen or collide each other to bounce back. The bounce angle is determined by applying laws of physics and each circle loses a certain velocity when they collide each other or with the edge of the screen. How does it help to relieve stress? Rather than swiping through the menu you can draw multiple circles and make them move in different directions. Studies have proven that this kind of apps in mobile are equivalent to stress relief balls." data-demo-link="https://github.com/sragsree/Draw-Play"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/stress.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Draw & Play - A Stress Reliever App</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-2">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/sports.png" data-title="Go Sport - An App to Follow, Meet And Play Sporting Games" data-content="
+                  Go Sport is an Java based application developed in android framework that locates the the people in a particular area in Google Maps who are interested in the same sport as the user.It also helps users to setup local matches and welcome interested people in the locality to take part in it. The app also hosts an open platform for people to chat." data-demo-link="https://github.com/sragsree/Go-Sport"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/sports1.png" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Go Sport</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-3">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/imdb1.png" data-title="IMDB Movie Dataset" data-content="
+                  This project is about performing a comprehensive analysis of IMDB movie dataset to predict the success rate of movies using popular machine learning concept and then comparing the results. Visualisation in various perspectives to anaylse the trend is also under the scope of this project. The project uses K-nearest neighbour, AdaBoost, SVM (Support Vector Machine), Naive Bayes Classifier and Logistic Regression." data-demo-link="https://github.com/sragsree/IMDB-Movie-Data-Prediction-Analysis"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/imdb.png" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">IMDB Movie Success - Prediction & Analysis</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-3">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/crash1.jpg" data-title="Automotive Crash Worthiness Data System Analysis" data-content="
+                  The goal of the project was to predict the chances of survival in road accidents using various machine learning models of spark data frames and RDDs . We also wanted to analyze the influence of airbag, seatbelts etc in safety of drivers and passengers in a vehicle.The dataset was found to be a highly imbalanced one and hence we extended our project to different case studies to see how Data frame and RDD ML models handle this scenarios.
+                  CASE STUDY 1: Data frame ML Models with default hyper parameter - To show that data is imbalanced
+                  CASE STUDY 2: Data frame ML Models with tweeted Hyper parameter - to handle imbalanced data
+                  CASE STUDY 3: RDD based ML models with tweeted Hyper parameter - to handle imbalanced data ANALYSIS on THE DATA SET.." data-demo-link="https://github.com/sragsree/Disaster-Survival"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/crash.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">NASS CDS Dataset Analysis</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-4">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/Encryption1.jpg" data-title="Multi-Level Imperceptible Encryption Algorithm" data-content="Implemented encoders and decoders of LSB coding, Parity coding, Phase coding, Spread Spectrum coding by hiding images behind audio signals. Developed a multi-level imperceptible coding algorithm better than the above 4 in terms of SNR using the same set of images and audio signal" data-demo-link="https://github.com/sragsree/Multi-Level-Imperceptible-Encryption-Algorithm">
+                    <div class="protfolio-image">
+                      <img src="images/Encryption.png" alt="portfolio">
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Multi-Level Imperceptible Encryption Algorithm</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-5">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/analysis1.jpg" data-title="ETL and Data analyis with Telecom System data set" data-content="
+                  Analyzed and designed Mapplets in Informatica to cleanse and pull data from application database to staging area and then to the data warehouse. Some extra information required for BI analysis were imported from flat files. The dashboard and various reports were generated from data mart and data warehouse data using SAP Business Objects. Various chasm traps and fan traps that occurred because of data quality issues were resolved to produce highly informative ad-hoc reports and dashboards." data-demo-link="https://github.com/sragsree/Telecom-System-ETL-Project"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/analysis.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">ETL and Data analyis with Telecom System data set</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                  
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-6">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/hand1.jpg" data-title="Low Cost Robotic Palm" data-content="A low-cost implementation technique of a robotic palm that replicated all the gestures of a human hand. The keep the cost down, the mechanical palm was made with recyclable plastics and homemade etching was employed to design the circuits. Arduino, an embedded unit was used as the controlling unit. Flex Sensors provided input for the Arduino and servo motors were fed with digital outputs from Arduino to mimic the gestures." data-demo-link="https://github.com/sragsree/Robotic-Palm-with-Arduino">
+                    <div class="protfolio-image">
+                      <img src="images/hand.jpg" alt="portfolio">
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Low Cost Robotic Palm</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+
+                  
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-7">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/stock1.png" data-title="Stock Management System" data-content="It was a C++ Application developed in DosBox to manage the business activities of a super market. It included features for adding product details on new stock arrival, Record details of daily transactions, automatic update of inventory based on stock and daily transaction data. This project made me the winner of Inter District IT project competition" data-demo-link="https://github.com/sragsree/Stock-Management-System">
+                    <div class="protfolio-image">
+                      <img src="images/stock.png" alt="portfolio">
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Stock Management System</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->
+                  
+                
+                <!-- Single Portfolio-->
+                <li class="single-port-item category-8">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="images/publication1.jpg" data-title="Biomorphic Palm with Arduino" data-content="A mechanical palm that replicated all the gestures of a human hand using Arduino(Embedded System). At the transmitter, inputs were read from flex sensors and serialized it before transmitted it with ZigBee module. At the receiver, data was deserialized and passed to servo motors which rotated accordingly to imitate the gestures." data-demo-link="http://ijirst.org/Article.php?manuscript=IJIRSTV2I6027"> <!-- Portfolio pop-up content-->
+                    <div class="protfolio-image">
+                      <img src="images/publication.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">Biomorphic Palm with Arduino</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+                <!--/ single portfolio -->  
+                  
+
+              </ul>
+              <!-- portfolio load more button-->
+              <a id="portfolio-item-loader" href="#" class="#"><i class="#"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #portfolio Section end -->
+
+    <!-- Team Section end -->
+    <section id="certifications" class="scroll-section root-sec brand-bg padd-tb-120 team-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix team-inner">
+            <div class="col-sm-12 col-md-10 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head team-text">
+                  <div class="col-sm-12">
+                    <h2 class="title">Certifications</h2>
+                    <p class="regular-text">The value of certification is not just in a piece of paper - it is in the way it changes lives
+                    <br></p> <br> <p align = "right">-Albert Einstein</p>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="overflow-hidden">
+                    <div class="row">
+                      <div id="teamSlider" class="clearfix card-element-wrapper">
+                        <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/azure-fundamentals.png" alt="">
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Azure Fundamentals<i class="mdi-navigation-more-vert right"></i></span>
+                              <p>2020-Present</p>
+                            </div>
+                            <div class="card-reveal">
+                              <div class="rev-title-wrap">
+                                <span class="card-title activator brand-text"><i class="mdi-navigation-close right"></i></span>
+                                <p>2020-Present</p>
+                              </div>
+                              <p class="rev-content">
+                                Professional Certification from Microsoft for Azure Community(AZ-900).
+                              </p>
+                            </div>
+                          </div>
+                        </div> <!-- single team member -->
+                        <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/K2_blackpearl_Core_Badge.png" alt="">
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">K2 BlackPearl Core<i class="mdi-navigation-more-vert right"></i></span>
+                              <p>2016-Present</p>
+                            </div>
+                            <div class="card-reveal">
+                              <div class="rev-title-wrap">
+                                <span class="card-title activator brand-text">K2 BlackPearl Core<i class="mdi-navigation-close right"></i></span>
+                                <p>2016-Present</p>
+                              </div>
+                              <p class="rev-content">
+                                 A professional certification from K2(Vendor), acquired from the knowledge gained from hand-on experience with K2 Workflows and other K2 components for 2 years.
+                              </p>
+                            </div>
+                          </div>
+                        </div> <!-- single team member -->
+                        <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/java.jpg" alt="">
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Diploma in Java<i class="mdi-navigation-more-vert right"></i></span>
+                              <p>2014-Present</p>
+                            </div>
+                            <div class="card-reveal">
+                              <div class="rev-title-wrap">
+                                <span class="card-title activator brand-text"><i class="mdi-navigation-close right"></i></span>
+                                <p>2014-Present</p>
+                              </div>
+                              <p class="rev-content">
+                                A diploma certification in Java 7 by learning Oracle certified couseware from NIIT. The certification included Oracle 11g lessons as well in addition to JAVA 7. (License.No.12EPZZZZZ9389) 
+                              </p>
+                            </div>
+                          </div>
+                        </div> <!-- single team member -->
+                        <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/K2_smartformsBuilder_Badge.png" alt="">
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">K2 Smartform Builder<i class="mdi-navigation-more-vert right"></i></span>
+                              <p>2016-present</p>
+                            </div>
+                            <div class="card-reveal">
+                              <div class="rev-title-wrap">
+                                <span class="card-title activator brand-text">K2 Smartform Builder<i class="mdi-navigation-close right"></i></span>
+                                <p>2016-present</p>
+                              </div>
+                              <p class="rev-content">
+                                A professional certification from K2(Vendor), acquired from the knowledge gained from hand-on experience with K2 Smartforms and other K2 components for 2 years. 
+                              </p>
+                            </div>
+                          </div>
+                        </div> <!-- single team member -->
+                        <div class="col-sm-4 single-card-box">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/bmc.png" alt="">
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Bloomberg Market Concepts<i class="mdi-navigation-more-vert right"></i></span>
+                              <p>2016-Present</p>
+                            </div>
+                            <div class="card-reveal">
+                              <div class="rev-title-wrap">
+                                <span class="card-title activator brand-text">Bloomberg Market Concepts<i class="mdi-navigation-close right"></i></span>
+                                <p>2016-Present</p>
+                              </div>
+                              <p class="rev-content">
+                                Bloomberg Market Concepts (BMC) is an 8 hour self-paced e-learning course that provides a visual introduction to the financial markets. BMC consists of 4 modules – Economics, Currencies, Fixed Income and Equities – woven together from Bloomberg data, news, analytics and television. 
+                              </p>
+                            </div>
+                          </div>
+                        </div> <!-- single team member -->
+                        <div class="col-sm-4 single-card-box">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/cppbadge.png" alt="">
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">C++ Programming<i class="mdi-navigation-more-vert right"></i></span>
+                              <p>2008-Present</p>
+                            </div>
+                            <div class="card-reveal">
+                              <div class="rev-title-wrap">
+                                <span class="card-title activator brand-text">C++ Programming<i class="mdi-navigation-close right"></i></span>
+                                <p>2008-Present</p>
+                              </div>
+                              <p class="rev-content">
+                                A basic level certification acquired in C++ by mastering the key concepts of Object-Oriented Programming. 
+                              </p>
+                            </div>
+                          </div>
+                        </div> <!-- single team member -->
+                      </div> <!-- #teamSlider end -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrapp tmu-ctrl">
+              <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="mdi-navigation-chevron-left brand-text"></i></a>
+              <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="mdi-navigation-chevron-right brand-text"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- .container -->
+    </section>
+    <!-- #team Section end -->
+
+    <!-- Funfacts Section end -->
+    <section id="funfacts" class="root-sec grey lighten-5 funfact-wrap">
+    <div class="sec-inner padd-tb-120">
+      <div class="container">
+        <div class="row">
+          <div class="funfact-inner">
+            <div class="col-sm-4 funfact-box">
+              <div class="center-align card-panel white">
+                <div class="feature-box-outer">
+                  <div class="funfact-box-inner">
+                    <div class="clearfix ">
+                      <i class="mdi-editor-insert-emoticon"></i>
+                      <span class="num countNumb">3</span>
+                    </div>
+                    <div class="context">Tech Conference</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- ./single fun fact box -->
+            <div class="col-sm-4 funfact-box">
+              <div class="center-align card-panel white">
+                <div class="feature-box-outer">
+                  <div class="funfact-box-inner">
+                    <div class="clearfix ">
+                      <i class="mdi-action-wallet-travel"></i>
+                      <span class="num countNumb">3</span>
+                    </div>
+                    <div class="context">Meetup Attendance</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- ./single fun fact box -->
+            <div class="col-sm-4 funfact-box">
+              <div class="center-align card-panel white">
+                <div class="feature-box-outer">
+                  <div class="funfact-box-inner">
+                    <div class="clearfix ">
+                      <i class="mdi-action-wallet-giftcard"></i>
+                      <span class="num countNumb">8</span>
+                    </div>
+                    <div class="context">Honors & Awards</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- ./single fun fact box -->
+          </div>
+        </div>
+
+      </div>  <!-- .container end -->
+    </div>
+    </section>
+    <!-- #funfacts Section end -->
+
+    <!-- Testimonial Section end -->
+    <section id="testimonial" class="scroll-section root-sec brand-bg padd-tb-120 testimonial-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="testimonial-inner">
+            <div class="col-sm-12 col-md-10 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head testimonial-text">
+                  <div class="col-sm-12">
+                    <h2 class="title">testimonial</h2>
+                    <p class="regular-text">"Credit is the only enduring testimonial to human's confidence in human" </p> <br> <p align = "right"> - James Blish</p>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="overflow-hidden">
+                    <div class="row">
+                      <div id="testimonialSlider" class="clearfix card-element-wrapper">
+                        <div class="col-sm-6 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/zanoop.png" alt="">
+                                <p class="saying-about">Sreerag is able to tackle any technology and quickly gain a useful understanding og its capabilities.He is also known for his thorough work and creative solutions to very complex solutions.</p>
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Zanoop R -</span>
+                              <a href="#">Program Manager, Tata Consultancy Services Ltd</a>
+                            </div>
+                          </div>
+                        </div> <!-- ./single testimonial box -->
+                        <div class="col-sm-6 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/madhu.png" alt="">
+                                <p class="saying-about">He is a quick as well as a deep learner. He understands the architecture quite well and his solutions are rather long visioned than the quick ones.One thing I liked about him was the dedication he shows towards meeting the commitment.</p>
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Madhu H -</span>
+                              <a href="#">Assistant Consultant, Tata Consultancy Services Ltd</a>
+                            </div>
+                          </div>
+                        </div> <!-- ./single testimonial box -->
+                        <div class="col-sm-6 single-card-box">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="images/karthik.png" alt="">
+                                <p class="saying-about">Sreerag is a highly dedicated and skilled candidate with good academic records.His patience, passion for learning, strong computer programming skills, prepare him beautifully for any company.</p>
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Karthik Selvan -</span>
+                              <a href="#">Lecturer, NSS College of Engineering</a>
+                            </div>
+                          </div>
+                        </div> <!-- ./single testimonial box -->
+                      </div> <!-- #testimonialSlider end -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrapp tmo-ctrl">
+              <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="mdi-navigation-chevron-left brand-text"></i></a>
+              <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="mdi-navigation-chevron-right brand-text"></i></a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end -->
+    </section>
+    <!-- #testimonial Section end -->
+
+
+    <!-- Contact Section end -->
+    <section id="contact" class="scroll-section root-sec grey lighten-5 padd-tb-120 blog-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="blog-inner">
+            <div class="col-sm-12 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head blog-text">
+                  <div class="col-sm-10">
+                    <h2 class="title">Contact</h2>
+                    <p class="regular-text">6800 132nd PL SE, Unit E105, Newcastle WA 98059</p>
+                    <ul class="clearfix contact-info">
+                      <li><a href="">+1-619 416 6753</a>
+                      </li>
+                      <li><a href="">codesmithery@gmail.com</a>
+                      </li>
+                      <li><a href="">https://sragsree.github.io/ssreerag</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div> <!-- contact text end -->
+
+                <div class="clearfix contact-form">
+
+                
+
+                <!-- Contact Form start -->
+                  <div class="col-sm-5">
+                    <div class="clearfix card-panel grey lighten-5 cform-wrapper">
+                      <form action="https://formspree.io/srag.sree@gmail.com" method="POST">
+                        <div class="input-field">
+                          <input id="contact_name" type="text" name="contactName" class="validate input-box">
+                          <label for="contact_name" class="input-label">Name</label>
+                        </div>
+                        <div class="input-field">
+                          <input id="email" type="email" name="_replyto" class="validate input-box">
+                          <label for="email" class="input-label">Email</label>
+                        </div>
+                        <div class="input-field">
+                          <input id="subject" type="text" name="contactSubject" class="validate input-box">
+                          <label for="subject" class="input-label">Subject</label>
+                        </div>
+                        <div class="input-field textarea-input">
+                          <textarea id="textarea1" name="contactMessage" class="validate materialize-textarea" style="height: 22px;"></textarea>
+                          <label for="textarea1" class="input-label">Message</label>
+                        </div>
+                        <div class="input-field submit-wrap clearfix">
+                          <button type="submit" value="Send" class="left waves-effect btn-flat brand-text submit-btn">send message</button>
+                          <div class="right form-loader-area">
+                            <svg class="circular size-20" height="20" width="20">
+                              <circle class="path" cx="10" cy="10" r="7" fill="none" stroke-width="3" stroke-miterlimit="10" />
+                            </svg>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div> <!-- ./contact form end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end -->
+      <div class="section-call-to-area">
+        <div class="container">
+          <div class="row">
+            <a href="#home" class="btn-floating btn-large button-middle call-to-home section-call-to-btn animated btn-up btn-hidden" data-section="#home">
+              <i class="mdi-navigation-expand-less"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #contact Section end -->
+
+    <!-- Footer Section end -->
+    <footer id="footer" class="root-sec white root-sec footer-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="clearfix footer-inner">
+              <ul class="left social-icons">
+                <li><a href="http://facebook.com/srag.sree" class="tooltips tooltipped facebook" data-position="top" data-delay="50" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/ssreerag/" class="tooltips tooltipped linkedin" data-position="top" data-delay="50" data-tooltip="Linkdin"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li><a href="https://plus.google.com/111952949672144442869" class="tooltips tooltipped google-plus" data-position="top" data-delay="50" data-tooltip="Google Plus"><i class="fa fa-google-plus"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/s_sreerag_/" class="tooltips tooltipped instagram" data-position="top" data-delay="50" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li><a href="https://github.com/sragsree" class="tooltips tooltipped github" data-position="top" data-delay="50" data-tooltip="Github"><i class="fa fa-github"></i></a>
+                </li>
+              </ul> <!-- ./social icons end -->
+              <div class="right copyright">
+                <p>Personal Website &copy; All Rights Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end-->
+    </footer>
+    <!-- #footer end -->
+
+  </main>
+  <!-- Main Container end-->
+
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/detectmobilebrowser.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="assets/js/gmaps.js"></script>
+  <script src="assets/libs/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/libs/materialize/js/materialize.min.js"></script>
+  <script src="assets/libs/jwplayer/jwplayer.js"></script>
+  <script src="assets/libs/sweetalert/sweet-alert.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
