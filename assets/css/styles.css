@@ -3053,6 +3053,31 @@ html.has-reveal .reveal:not(.is-visible) {
   }
 }
 
+/* Keep desktop copy and portrait together without changing mobile. */
+@media(min-width:900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0,520px) 290px;
+    gap: clamp(36px,5vw,64px);
+    justify-content: center;
+    min-height: 0
+  }
+
+  .hero-photo {
+    width: min(100%,290px);
+    height: 430px;
+    padding: 0 10px 18px 20px;
+    align-self: center;
+    justify-self: end
+  }
+
+  .hero-photo .photo-frame,
+  .hero-photo .photo-frame img {
+    min-height: 0;
+    max-height: none;
+    height: 100%
+  }
+}
+
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior: auto

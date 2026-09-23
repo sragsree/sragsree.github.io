@@ -29,3 +29,5 @@ Use relative paths for local assets. The social-preview image uses an absolute p
 The approved visual identity uses light surfaces, teal/cyan accents, personal photography, and interactive sections. Source is intentionally framework-free.
 
 The current portrait uses the owner’s September 2026 photograph, with an AI-edited neutral studio background, wider framing, and a muted medium blue-gray shirt. Softer facial highlights and a reduced orange cast balance the portrait against the site’s cool palette. The owner prefers the original framing: vertical “A BUILDER AT HEART” side text, a floating tagline card over the lower part of the photo, and the dotted corner accent. Keep the caption clear of the face at every screen size.
+
+At desktop widths (900px and above), center the hero copy and portrait as a group: a text column capped at 520px, a 36–64px responsive gap, and a 290px portrait column. Keep the portrait figure 430px tall; its 260 × 412px image frame retains the tall portrait shape at a compact size. Let the hero height follow its content. Preserve the existing mobile and tablet composition below 900px.
