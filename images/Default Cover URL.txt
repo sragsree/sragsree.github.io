@@ -1,1 +1,0 @@
-'../../images/home-bg.jpg'

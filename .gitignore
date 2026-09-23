@@ -1,0 +1,11 @@
+# Operating-system files
+.DS_Store
+._*
+
+# Local logs and generated validation artifacts
+*.log
+output/
+tmp/
+
+# Local design-session state
+.superpowers/
