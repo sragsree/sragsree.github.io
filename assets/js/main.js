@@ -7,20 +7,35 @@
     root.classList.add("js");
 
     const header = document.getElementById("site-header");
+    const hero = document.querySelector(".hero");
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("primary-menu");
     const progress = document.getElementById("scroll-progress");
     const backToTop = document.getElementById("back-to-top");
     const navLinks = menu ? [...menu.querySelectorAll("a[href^='#']")] : [];
     const sections = [...document.querySelectorAll("[data-nav-section][id]")];
+    const reveals = [...document.querySelectorAll(".reveal")];
     const desktop = window.matchMedia("(min-width: 900px)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const hasAnimationFrame = typeof window.requestAnimationFrame === "function";
+    const revealProgress = new WeakMap();
     let sectionPositions = [];
+    let revealPositions = [];
+    let viewportHeight = 1;
     let headerHeight = 0;
+    let heroTop = 0;
+    let heroHeight = 1;
+    let heroProgress = -1;
     let scrollRange = 0;
     let framePending = false;
     let measureNeeded = true;
     let activeSection;
+
+    const setRevealProgress = (element, value) => {
+      if (revealProgress.get(element) === value) return;
+      revealProgress.set(element, value);
+      element.style.setProperty("--reveal-progress", String(value));
+    };
 
     const setMenuOpen = (open) => {
       if (!menuToggle || !menu) return;
@@ -75,12 +90,29 @@
       framePending = false;
       const scrollY = Math.max(0, window.scrollY);
       if (measureNeeded) {
+        viewportHeight = Math.max(1, window.innerHeight);
         headerHeight = header ? header.getBoundingClientRect().height : 0;
-        scrollRange = Math.max(0, root.scrollHeight - window.innerHeight);
+        if (hero) {
+          const bounds = hero.getBoundingClientRect();
+          heroTop = bounds.top + scrollY;
+          heroHeight = Math.max(1, bounds.height);
+        }
+        scrollRange = Math.max(0, root.scrollHeight - viewportHeight);
         sectionPositions = sections.map((section) => ({
           id: section.id,
           top: section.getBoundingClientRect().top + scrollY,
         })).sort((first, second) => first.top - second.top);
+        revealPositions = reveals.map((element) => {
+          if (element.matches(".experience-heading") || element.hidden || element.offsetHeight === 0) {
+            return { element, skip: true };
+          }
+          // Offset coordinates exclude the transforms used by the reveal itself.
+          let top = 0;
+          for (let parent = element; parent; parent = parent.offsetParent) {
+            top += parent.offsetTop;
+          }
+          return { element, top, skip: false };
+        });
         measureNeeded = false;
       }
       if (header) header.classList.toggle("is-scrolled", scrollY > 12);
@@ -89,6 +121,31 @@
         progress.style.transform = `scaleX(${fraction})`;
       }
       if (backToTop) backToTop.hidden = scrollY <= 600;
+      if (hero) {
+        const nextProgress = hasAnimationFrame && desktop.matches && !reducedMotion.matches
+          ? Math.min(1, Math.max(0, (scrollY + headerHeight - heroTop) / heroHeight))
+          : 0;
+        if (nextProgress !== heroProgress) {
+          heroProgress = nextProgress;
+          hero.style.setProperty("--hero-progress", String(heroProgress));
+        }
+      }
+      const revealMotionEnabled = hasAnimationFrame && !reducedMotion.matches;
+      revealPositions.forEach(({ element, top, skip }) => {
+        if (element.contains(document.activeElement)) element.classList.add("is-focus-visible");
+        let value = revealProgress.get(element) ?? 0;
+        if (!revealMotionEnabled || skip || element.classList.contains("is-focus-visible")) {
+          value = 1;
+        } else if (top <= scrollY + viewportHeight * 0.86) {
+          value = 1;
+        } else if (top > scrollY + viewportHeight + 96) {
+          // Re-arm only after the element is fully below the viewport, avoiding threshold flicker.
+          value = 0;
+        }
+        setRevealProgress(element, value);
+      });
+      // Set initial targets before enabling transitions so already-visible content stays visible.
+      root.classList.toggle("has-reveal", revealMotionEnabled);
 
       let current = null;
       for (const section of sectionPositions) {
@@ -112,12 +169,15 @@
       measureNeeded = measureNeeded || remeasure;
       if (!framePending) {
         framePending = true;
-        window.requestAnimationFrame(updateScrollState);
+        if (hasAnimationFrame) window.requestAnimationFrame(updateScrollState);
+        else updateScrollState();
       }
     };
     window.addEventListener("scroll", () => scheduleScrollUpdate(), { passive: true });
     window.addEventListener("resize", () => scheduleScrollUpdate(true), { passive: true });
     window.addEventListener("load", () => scheduleScrollUpdate(true), { once: true });
+    desktop.addEventListener("change", () => scheduleScrollUpdate(true));
+    reducedMotion.addEventListener("change", () => scheduleScrollUpdate(true));
     if ("ResizeObserver" in window) {
       const resizeObserver = new ResizeObserver(() => scheduleScrollUpdate(true));
       resizeObserver.observe(document.body);
@@ -240,33 +300,16 @@
     const footerYear = document.getElementById("footer-year");
     if (footerYear) footerYear.textContent = String(new Date().getFullYear());
 
-    const reveals = [...document.querySelectorAll(".reveal")];
     document.addEventListener("focusin", (event) => {
       let element = event.target.closest(".reveal");
       while (element) {
-        element.classList.add("is-visible");
+        element.classList.add("is-focus-visible");
+        setRevealProgress(element, 1);
         element = element.parentElement ? element.parentElement.closest(".reveal") : null;
       }
+      scheduleScrollUpdate();
     });
-    if ("IntersectionObserver" in window && !reducedMotion.matches) {
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.08, rootMargin: "0px 0px -24px 0px" });
-      root.classList.add("has-reveal");
-      reveals.forEach((element) => revealObserver.observe(element));
-      reducedMotion.addEventListener("change", (event) => {
-        if (!event.matches) return;
-        revealObserver.disconnect();
-        root.classList.remove("has-reveal");
-        reveals.forEach((element) => element.classList.add("is-visible"));
-      });
-    } else {
-      reveals.forEach((element) => element.classList.add("is-visible"));
-    }
+    document.addEventListener("focusout", () => scheduleScrollUpdate());
 
     scheduleScrollUpdate(true);
   };
