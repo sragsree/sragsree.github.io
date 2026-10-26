@@ -25,7 +25,7 @@ Distinguish work personally built from work designed, directed, or delivered by 
 - Omit private program names, internal implementation details, and operational metrics.
 - Offer the full resume by email; do not add the private PDF to the repository.
 - Use the verified SimpleLogin forwarding alias `sreerag.partner045@slmail.me` in every email link and retain the approved LinkedIn profile. Keep the destination inbox out of HTML, scripts, documentation, and metadata.
-- Keep the alias out of visible text. Use “Send me an email” and résumé-request links. The alias remains public in `mailto:` links and page source; forwarding keeps the destination inbox out of the current website files. Preserve existing subject parameters when changing the alias.
+- Keep the alias out of visible text. Use “Let’s connect” and résumé-request links. The alias remains public in `mailto:` links and page source; forwarding keeps the destination inbox out of the current website files. Preserve existing subject parameters when changing the alias.
 - Present personal projects as earlier technical foundations and prototypes, rather than currently operated services or examples of current management responsibilities.
 - Keep project descriptions aligned with repository evidence: sample-page price extraction for the book demo, locally reproducible Firebase flows with optional Maps, retrospective movie-label classification, and five-finger flexion with physical bench validation still required.
 
