@@ -5,6 +5,7 @@
     const lab = document.querySelector(".readiness-lab");
     const hero = document.querySelector(".hero-grid");
     const surfaces = [hero, lab].filter(Boolean);
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     if (lab) {
       const inputs = [...lab.querySelectorAll("input[data-gate]")];
@@ -26,6 +27,10 @@
       const stateLabel = lab.querySelector("[data-release-state]");
       const count = lab.querySelector("[data-gate-count]");
       const result = lab.querySelector(".decision-result");
+      const preview = lab.querySelector(".capacity-preview");
+      const previewLabels = preview && ["node", "fabric", "eligibility", "evidence", "authority"]
+        .map((key) => preview.querySelector(`[data-${key}-caption]`));
+      const hasPreview = previewLabels && previewLabels.every(Boolean);
       const valid = inputs.length === keys.length && keys.every((key) => inputs.some((input) => input.dataset.gate === key))
         && presets.every((button) => scenarios[button.dataset.scenario])
         && title && reason && owner && blockers && stateLabel && count && result;
@@ -35,10 +40,10 @@
           const values = Object.fromEntries(inputs.map((input) => [input.dataset.gate, input.checked]));
           const missing = keys.filter((key) => !values[key]);
           const ready = missing.length === 0;
+          const wasReady = lab.dataset.ready === "true";
           lab.dataset.ready = String(ready);
           inputs.forEach((input) => {
             input.closest("label").querySelector("[data-gate-status]").textContent = input.checked ? "Met" : "Required";
-            lab.querySelector(`[data-meter="${input.dataset.gate}"]`).classList.toggle("is-met", input.checked);
           });
           presets.forEach((button) => {
             const scenario = scenarios[button.dataset.scenario];
@@ -48,15 +53,33 @@
           stateLabel.textContent = ready ? "Eligible" : "Held";
           blockers.textContent = ready ? "All four conditions met in this model." : `Still required: ${missing.map((key) => gateNames[key]).join(", ")}.`;
 
+          if (hasPreview) {
+            preview.dataset.nodes = !values.node ? "required" : values.evidence ? "met" : "stale";
+            preview.dataset.fabric = !values.fabric ? "required" : values.evidence ? "met" : "stale";
+            preview.dataset.evidence = values.evidence ? "met" : "missing";
+            preview.dataset.authority = values.ownership ? "met" : "missing";
+            preview.dataset.eligible = String(ready);
+            const captions = [
+              !values.node ? "Check health" : values.evidence ? "Validated" : "Revalidate",
+              !values.fabric ? "Qualify fabric" : values.evidence ? "Qualified" : "Revalidate",
+              ready ? "Eligible in model" : "Held",
+              values.evidence ? "Current evidence" : "Refresh evidence",
+              values.ownership ? "Handoff authorized" : "Handoff held",
+            ];
+            previewLabels.forEach((element, index) => { element.textContent = captions[index]; });
+            // One visual acknowledgement of newly eligible capacity, never a running-workload claim.
+            preview.classList.toggle("is-releasing", animate && ready && !wasReady && !reducedMotion.matches);
+          }
+
           let decision;
           if (!values.ownership) {
-            decision = ["Hold for ownership.", "Healthy hardware still needs a clear control boundary. Close maintenance and authorize exclusive handoff before release.", "Operations + Allocation control"];
+            decision = ["Hold for ownership.", "Release requires a clear control boundary. Close maintenance and authorize exclusive handoff before release.", "Operations + Allocation control"];
           } else if (!values.node) {
             decision = ["Hold for qualification.", "A completed repair does not prove GPU and host health. Re-run validation before relying on this capacity.", "Platform engineering + Qualification"];
+          } else if (!values.evidence) {
+            decision = ["Current evidence required.", "Existing checks do not establish current readiness. Refresh evidence for the current hardware, software, and topology before release.", "Platform engineering + Operations"];
           } else if (!values.fabric) {
             decision = ["Healthy nodes. Unqualified fabric.", "Individual GPUs can pass while distributed workloads still struggle. Validate the requested topology and collective performance.", "Networking + Qualification"];
-          } else if (!values.evidence) {
-            decision = ["Old evidence. New configuration.", "A passing result belongs to what was tested. Hardware, software, or topology changes require fresh evidence before release.", "Platform engineering + Operations"];
           } else {
             decision = ["Eligible for handoff.", "Node and fabric checks pass, evidence matches the current configuration, and release authority is established. This model permits handoff.", "Allocation control + Customer readiness"];
           }
@@ -77,6 +100,14 @@
           });
         });
         result.addEventListener("animationend", () => result.classList.remove("is-changing"));
+        if (hasPreview) {
+          preview.addEventListener("animationend", (event) => {
+            if (event.animationName === "capacity-release") preview.classList.remove("is-releasing");
+          });
+          reducedMotion.addEventListener("change", () => {
+            if (reducedMotion.matches) preview.classList.remove("is-releasing");
+          });
+        }
         render(false);
       }
     }
@@ -84,7 +115,6 @@
     if (!surfaces.length) return;
 
     const pointerMedia = window.matchMedia("(hover: hover) and (pointer: fine)");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const hasAnimationFrame = typeof window.requestAnimationFrame === "function";
     let frameId = 0;
     let pendingPoint = null;

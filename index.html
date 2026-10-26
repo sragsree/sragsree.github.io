@@ -17,10 +17,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <script src="assets/js/theme.js?v=20260925-dark-theme"></script>
-    <link rel="stylesheet" href="assets/css/styles.css?v=20261025-smooth-reveal">
-    <link rel="stylesheet" href="assets/css/experience.css?v=20261026-placement">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261026-consistent-panels">
+    <link rel="stylesheet" href="assets/css/experience.css?v=20261026-capacity-path">
     <script src="assets/js/main.js?v=20261025-unified-reveal" defer></script>
-    <script src="assets/js/experience.js?v=20261026-readiness" defer></script>
+    <script src="assets/js/experience.js?v=20261026-capacity-path" defer></script>
     <script src="assets/js/hero-pulses.js?v=20261026-pairs" defer></script>
   </head>
   <body>
@@ -372,7 +372,37 @@
                 </fieldset>
                 <div class="release-decision" role="region" aria-labelledby="decision-label">
                   <div class="decision-top"><span id="decision-label">Release decision</span><span class="decision-state" data-release-state>Held</span></div>
-                  <div class="readiness-meter" aria-hidden="true"><span data-meter="node"></span><span data-meter="fabric"></span><span data-meter="evidence"></span><span data-meter="ownership" class="is-met"></span></div>
+                  <figure class="capacity-preview" data-nodes="required" data-fabric="required" data-evidence="missing" data-authority="met" data-eligible="false">
+                    <figcaption>Illustrative capacity path</figcaption>
+                    <svg viewBox="0 0 600 145" fill="none" aria-hidden="true">
+                      <g class="capacity-node-group">
+                        <path class="capacity-wire" d="M126 38H163Q180 38 180 55V72H244M126 104H163Q180 104 180 87V72"/>
+                        <rect class="capacity-shell" x="14" y="16" width="112" height="44" rx="8"/>
+                        <rect class="capacity-shell" x="14" y="82" width="112" height="44" rx="8"/>
+                        <path class="capacity-chip" d="M30 28h20v20H30zM62 28h20v20H62zM30 94h20v20H30zM62 94h20v20H62z"/>
+                        <path class="capacity-ports" d="M96 31h16M96 40h16M96 97h16M96 106h16"/>
+                      </g>
+                      <g class="capacity-fabric-group">
+                        <path class="capacity-wire" d="M324 72H412"/>
+                        <rect class="capacity-shell" x="244" y="40" width="80" height="64" rx="10"/>
+                        <path class="capacity-ports" d="M258 56h52M258 72h52M258 88h52M270 56v32M298 56v32"/>
+                      </g>
+                      <g class="capacity-workload-group">
+                        <path class="capacity-wire" d="M412 72H454"/>
+                        <rect class="capacity-shell" x="454" y="36" width="132" height="72" rx="10"/>
+                        <path class="capacity-ports" d="M472 54h96M472 72h58M472 88h38"/>
+                        <path class="capacity-check" d="m542 82 9 9 18-22"/>
+                        <path class="capacity-hold" d="M547 75v18M559 75v18"/>
+                      </g>
+                      <path class="capacity-transfer" pathLength="100" d="M180 72H454"/>
+                    </svg>
+                    <div class="capacity-labels">
+                      <span>GPU nodes<strong data-node-caption>Check health</strong></span>
+                      <span>Fabric<strong data-fabric-caption>Qualify fabric</strong></span>
+                      <span>Workload eligibility<strong data-eligibility-caption>Held</strong></span>
+                    </div>
+                    <div class="capacity-conditions"><span data-evidence-caption>Refresh evidence</span><span data-authority-caption>Handoff authorized</span></div>
+                  </figure>
                   <p class="gate-count" data-gate-count>1 of 4 conditions met</p>
                   <div class="decision-result" aria-live="polite" aria-atomic="true">
                     <h4 data-release-title>Hold for<br>qualification.</h4>

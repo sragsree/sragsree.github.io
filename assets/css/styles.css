@@ -1014,11 +1014,7 @@ a:hover .circle-arrow {
   min-height: 490px;
   border-radius: 32px;
   color: var(--ink);
-  background: radial-gradient(ellipse at 100% 100%,#1b4850,transparent 65%),#101e23;
-  --ink: #f5f5f7;
-  --muted: #b7c5c8;
-  --accent: #70d7dc;
-  --accent-light: #163f46
+  background: var(--card)
 }
 
 .leadership-copy>.eyebrow {
@@ -3728,7 +3724,7 @@ h1>span {
 #leadership .leadership-details {
   grid-column: 1/-1;
   padding-top: 12px;
-  border-top: 1px solid var(--accent-light)
+  border-top: 1px solid var(--line)
 }
 
 #leadership .leadership-details>summary {
