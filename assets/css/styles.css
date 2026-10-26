@@ -3520,7 +3520,7 @@ h1>span {
 #impact .impact-grid {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
-  align-items: start;
+  align-items: stretch;
   gap: 24px
 }
 
@@ -3601,7 +3601,8 @@ h1>span {
   color: var(--ink);
   font-size: 15px;
   line-height: 1.45;
-  letter-spacing: -.2px
+  letter-spacing: -.2px;
+  overflow-wrap: anywhere
 }
 
 #impact .shift-state:last-child strong {
@@ -3639,6 +3640,37 @@ h1>span {
 #impact .impact-card>.case-details {
   margin-top: auto;
   padding-top: 12px
+}
+
+@media screen and (min-width:900px) {
+  @supports (grid-template-rows:subgrid) {
+    /* Share content rows without fixed heights or clipped story disclosures. */
+    #impact .impact-card {
+      display: grid;
+      grid-row: span 5;
+      grid-template-rows: subgrid;
+      row-gap: 0
+    }
+
+    #impact .shift-state {
+      align-self: start
+    }
+
+    #impact .impact-card>.case-details {
+      align-self: start;
+      margin-top: 0
+    }
+  }
+}
+
+@media screen and (min-width:900px) and (max-width:1100px) {
+  #impact .impact-shift {
+    gap: 4px
+  }
+
+  #impact .shift-state strong {
+    font-size: 14px
+  }
 }
 
 #leadership .leadership-panel {

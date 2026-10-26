@@ -3,8 +3,10 @@
 
   const init = () => {
     const lab = document.querySelector(".readiness-lab");
-    const hero = document.querySelector(".hero-grid");
-    const surfaces = [hero, lab].filter(Boolean);
+    const surfaces = [...document.querySelectorAll(
+      ".hero-grid, .impact-card, .leadership-panel, .prototype-flow, .decision-card, "
+      + ".readiness-lab, .hands-on-strip, .career-item, .project-card, .contact-links > a"
+    )];
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     if (lab) {
@@ -123,7 +125,8 @@
     const clearSurface = (surface) => {
       if (!surface) return;
       surface.classList.remove("is-pointer-active");
-      ["--pointer-x", "--pointer-y", "--pointer-dx", "--pointer-dy"].forEach((property) => surface.style.removeProperty(property));
+      // Keep the light at its last position while fading; reset hero parallax.
+      ["--pointer-dx", "--pointer-dy"].forEach((property) => surface.style.removeProperty(property));
     };
 
     const resetPointer = () => {
@@ -154,14 +157,16 @@
       const y = Math.min(1, Math.max(0, (point.y - bounds.top) / bounds.height));
       if (activeSurface !== point.surface) clearSurface(activeSurface);
       activeSurface = point.surface;
-      activeSurface.style.setProperty("--pointer-x", `${(x * 100).toFixed(2)}%`);
-      activeSurface.style.setProperty("--pointer-y", `${(y * 100).toFixed(2)}%`);
+      // Pixel coordinates let project artwork share the panel's light position.
+      activeSurface.style.setProperty("--pointer-x", `${(x * bounds.width).toFixed(2)}px`);
+      activeSurface.style.setProperty("--pointer-y", `${(y * bounds.height).toFixed(2)}px`);
       activeSurface.style.setProperty("--pointer-dx", `${((x - 0.5) * 8).toFixed(2)}px`);
       activeSurface.style.setProperty("--pointer-dy", `${((y - 0.5) * 8).toFixed(2)}px`);
       activeSurface.classList.add("is-pointer-active");
     };
 
     surfaces.forEach((surface) => {
+      surface.classList.add("pointer-surface");
       const queuePointer = (event) => {
         if (!pointerEnabled() || event.pointerType === "touch") return;
         pendingPoint = { surface, x: event.clientX, y: event.clientY };
@@ -175,6 +180,12 @@
       surface.addEventListener("pointerleave", leaveSurface);
       surface.addEventListener("pointercancel", leaveSurface);
     });
+
+    // Tabs and project filters can hide a panel while the pointer stays still.
+    const hiddenObserver = new MutationObserver(() => {
+      if (activeSurface?.hidden || pendingPoint?.surface.hidden) resetPointer();
+    });
+    surfaces.forEach((surface) => hiddenObserver.observe(surface, { attributes: true, attributeFilter: ["hidden"] }));
 
     window.addEventListener("scroll", resetPointer, { passive: true });
     document.addEventListener("visibilitychange", resetPointer);

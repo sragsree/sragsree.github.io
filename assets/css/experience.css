@@ -1,5 +1,6 @@
-/* Interactive, illustrative GPU readiness model and restrained hero motion. */
+/* Illustrative GPU readiness, shared panel lighting, and restrained hero motion. */
 .hero-grid { position: relative; isolation: isolate; }
+.pointer-surface { position: relative; isolation: isolate; }
 .hero-copy { position: relative; z-index: 1; }
 .hero-photo { z-index: 1; }
 .hero-infrastructure { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; color: var(--accent); pointer-events: none; z-index: -1; }
@@ -7,8 +8,8 @@
 .infrastructure-grid { opacity: .11; }
 .infrastructure-traces { stroke: currentColor; stroke-width: 1; opacity: .2; }
 .infrastructure-signal { stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 5 95; opacity: 0; }
-.hero-grid::before,.readiness-lab::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(340px circle at var(--pointer-x,75%) var(--pointer-y,45%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 75%); opacity: 0; transition: opacity .35s ease; z-index: -1; }
-.is-pointer-active::before { opacity: 1; }
+.pointer-surface::after,.project-card.pointer-surface .project-art::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(340px circle at var(--pointer-x,75%) var(--pointer-y,45%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 75%); opacity: 0; transition: opacity .35s ease; z-index: -1; }
+.pointer-surface.is-pointer-active::after,.project-card.is-pointer-active .project-art::after { opacity: 1; }
 .hero-motion-toggle { position: absolute; right: 24px; bottom: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 20px; background: color-mix(in srgb,var(--surface) 86%,transparent); color: var(--muted); font: inherit; font-size: 10px; cursor: pointer; }
 .hero-motion-toggle[hidden] { display: none; }
 .hero-motion-toggle:hover { color: var(--accent); }
@@ -153,10 +154,13 @@ html[data-theme="dark"] .readiness-lab { --lab-wait: #e4b675; --lab-wait-bg: #37
 }
 @media(prefers-reduced-motion:reduce) {
   .hero-infrastructure svg { transform: none; }
-  .hero-grid::before,.readiness-lab::before,.infrastructure-signal,.hero-motion-toggle { display: none; }
+  .pointer-surface::after,.project-card.pointer-surface .project-art::after,.infrastructure-signal,.hero-motion-toggle { display: none; }
+}
+@media (hover:none),(pointer:coarse) {
+  .pointer-surface::after,.project-card.pointer-surface .project-art::after { display: none; }
 }
 @media print {
-  .hero-infrastructure,.hero-grid::before,.readiness-lab::before,.hero-motion-toggle,.lab-presets,.capacity-transfer { display: none!important; }
+  .hero-infrastructure,.pointer-surface::after,.project-card.pointer-surface .project-art::after,.hero-motion-toggle,.lab-presets,.capacity-transfer { display: none!important; }
   .readiness-section { margin-top: 18px; padding: 18px 0; }
   .readiness-lab { background: transparent; border: 1px solid #bbb; }
   .lab-workspace { display: grid; grid-template-columns: 1fr 1fr; }
