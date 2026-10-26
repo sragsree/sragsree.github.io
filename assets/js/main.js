@@ -103,7 +103,11 @@
           top: section.getBoundingClientRect().top + scrollY,
         })).sort((first, second) => first.top - second.top);
         revealPositions = reveals.map((element) => {
-          if (element.matches(".experience-heading") || element.hidden || element.offsetHeight === 0) {
+          if (element.hidden || element.offsetHeight === 0) {
+            return { element, hidden: true };
+          }
+          const scope = element.dataset.reveal;
+          if (element.matches(".experience-heading") || (scope && (scope === "desktop") !== desktop.matches)) {
             return { element, skip: true };
           }
           // Offset coordinates exclude the transforms used by the reveal itself.
@@ -131,12 +135,20 @@
         }
       }
       const revealMotionEnabled = hasAnimationFrame && !reducedMotion.matches;
-      revealPositions.forEach(({ element, top, skip }) => {
-        if (element.contains(document.activeElement)) element.classList.add("is-focus-visible");
+      // Keep entrances visible inside the viewport on both desktop and mobile.
+      const revealLine = scrollY + viewportHeight * 0.76;
+      revealPositions.forEach(({ element, top, skip, hidden }) => {
+        const hasFocus = element.contains(document.activeElement);
+        element.classList.toggle("is-focus-visible", hasFocus);
+        if (hidden) {
+          // Inactive tabs and filtered cards must remain ready for their next entrance.
+          setRevealProgress(element, 0);
+          return;
+        }
         let value = revealProgress.get(element) ?? 0;
-        if (!revealMotionEnabled || skip || element.classList.contains("is-focus-visible")) {
+        if (!revealMotionEnabled || skip || hasFocus) {
           value = 1;
-        } else if (top <= scrollY + viewportHeight * 0.86) {
+        } else if (top <= revealLine) {
           value = 1;
         } else if (top > scrollY + viewportHeight + 96) {
           // Re-arm only after the element is fully below the viewport, avoiding threshold flicker.
