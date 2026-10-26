@@ -18,7 +18,10 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <script src="assets/js/theme.js?v=20260925-dark-theme"></script>
     <link rel="stylesheet" href="assets/css/styles.css?v=20261025-smooth-reveal">
+    <link rel="stylesheet" href="assets/css/experience.css?v=20261026-placement">
     <script src="assets/js/main.js?v=20261025-unified-reveal" defer></script>
+    <script src="assets/js/experience.js?v=20261026-readiness" defer></script>
+    <script src="assets/js/hero-pulses.js?v=20261026-pairs" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -55,6 +58,33 @@
           <span>People. Platforms. Possibility.</span>
         </div>
         <div class="container hero-grid">
+          <div class="hero-infrastructure" aria-hidden="true">
+            <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" fill="none">
+              <defs>
+                <pattern id="infrastructure-grid" width="42" height="42" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="currentColor"/></pattern>
+                <linearGradient id="infrastructure-fade" x1="0" y1="1" x2="1" y2="0"><stop stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="white"/></linearGradient>
+                <mask id="infrastructure-mask"><rect width="1200" height="700" fill="url(#infrastructure-fade)"/></mask>
+              </defs>
+              <g mask="url(#infrastructure-mask)">
+                <rect width="1200" height="700" fill="url(#infrastructure-grid)" class="infrastructure-grid"/>
+                <g class="infrastructure-traces">
+                  <path d="M-40 616H580Q612 616 612 584V544Q612 512 644 512H730Q762 512 762 480V412Q762 380 794 380H1240"/>
+                  <path d="M480 740V624Q480 592 512 592H690Q722 592 722 560V270Q722 238 754 238H1136Q1168 238 1168 206V-40"/>
+                  <path d="M600-40V68Q600 100 632 100H1010Q1042 100 1042 132V612Q1042 644 1074 644H1240"/>
+                  <path d="M868-40V36Q868 68 900 68H1160Q1192 68 1192 100V480"/>
+                  <path d="M-40 510H400Q432 510 432 542V650Q432 682 464 682H900Q932 682 932 650V540Q932 508 964 508H1240"/>
+                  <circle cx="762" cy="412" r="7"/><circle cx="722" cy="270" r="7"/><circle cx="1042" cy="612" r="7"/>
+                  <rect x="582" y="74" width="36" height="52" rx="8"/><rect x="850" y="42" width="36" height="52" rx="8"/>
+                </g>
+                <path class="infrastructure-signal" pathLength="100" d="M-40 616H580Q612 616 612 584V544Q612 512 644 512H730Q762 512 762 480V412Q762 380 794 380H1240"/>
+                <path class="infrastructure-signal" pathLength="100" d="M480 740V624Q480 592 512 592H690Q722 592 722 560V270Q722 238 754 238H1136Q1168 238 1168 206V-40"/>
+                <path class="infrastructure-signal" pathLength="100" d="M600-40V68Q600 100 632 100H1010Q1042 100 1042 132V612Q1042 644 1074 644H1240"/>
+                <path class="infrastructure-signal" pathLength="100" d="M868-40V36Q868 68 900 68H1160Q1192 68 1192 100V480"/>
+                <path class="infrastructure-signal" pathLength="100" d="M-40 510H400Q432 510 432 542V650Q432 682 464 682H900Q932 682 932 650V540Q932 508 964 508H1240"/>
+              </g>
+            </svg>
+          </div>
+          <button class="hero-motion-toggle" id="hero-motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-toggle-icon" aria-hidden="true">Ⅱ</span><span data-motion-label>Pause motion</span></button>
           <div class="hero-copy">
             <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Engineering leader · AI infrastructure</p>
             <p class="hero-name">Hi, I’m Sreerag Sreenivasan.</p>
@@ -84,7 +114,7 @@
         </div>
         <div class="container hero-footer">
           <span>Grounded in engineering. Growing impact through teams.</span>
-          <a href="#impact" aria-label="Discover selected impact">Scroll to explore <span class="circle-arrow" aria-hidden="true">↓</span></a>
+          <a href="#impact" aria-label="Explore selected impact">Scroll to explore <span class="circle-arrow" aria-hidden="true">↓</span></a>
         </div>
       </section>
       <div class="career-strip" aria-label="Career at a glance">
@@ -194,7 +224,7 @@
               <p class="eyebrow section-label"><span>02</span> How I lead</p>
               <h2 id="leadership-title">Build leadership<br>that lasts.</h2>
             </div>
-            <p>Clear direction. Real ownership. Room to grow.</p>
+            <p>I lead through engineering managers and connect roadmaps, resource priorities, and operating standards across teams and sites.</p>
           </div>
           <div class="leadership-tabs" id="leadership-tabs" role="tablist" aria-label="Leadership focus" hidden>
             <button id="tab-leaders" role="tab" aria-selected="true" aria-controls="panel-leaders" tabindex="0"><span aria-hidden="true">01</span> Develop leaders <span class="tab-arrow" aria-hidden="true">↗</span></button>
@@ -296,6 +326,66 @@
               </details>
             </article>
           </div>
+          <section class="readiness-section" id="perspective" aria-labelledby="readiness-title">
+            <div class="readiness-heading reveal">
+              <div><p class="eyebrow">Explore the decision</p><h3 id="readiness-title">When is GPU capacity<br>ready for customers?</h3></div>
+              <p>Explore how technical evidence and ownership<br>shape a release decision.</p>
+            </div>
+            <div class="readiness-lab reveal" data-ready="false">
+              <div class="lab-toolbar">
+                <span class="lab-label"><span aria-hidden="true">⌘</span> GPU readiness lab</span>
+                <span class="lab-disclaimer">Illustrative model · No live data</span>
+              </div>
+              <div class="lab-presets" role="group" aria-label="Example readiness scenarios">
+                <span>Try a scenario</span>
+                <button type="button" data-scenario="repair" aria-pressed="true" disabled>After a repair</button>
+                <button type="button" data-scenario="fabric" aria-pressed="false" disabled>Fabric degraded</button>
+                <button type="button" data-scenario="ready" aria-pressed="false" disabled>Ready for handoff</button>
+              </div>
+              <div class="lab-workspace">
+                <fieldset class="readiness-checks">
+                  <legend>Change the evidence</legend>
+                  <label class="readiness-check">
+                    <input type="checkbox" data-gate="node" disabled>
+                    <span class="gate-icon" aria-hidden="true">01</span>
+                    <span class="gate-copy"><strong>Node validation</strong><span>GPU and host checks pass.</span></span>
+                    <span class="gate-state" data-gate-status>Required</span>
+                  </label>
+                  <label class="readiness-check">
+                    <input type="checkbox" data-gate="fabric" disabled>
+                    <span class="gate-icon" aria-hidden="true">02</span>
+                    <span class="gate-copy"><strong>Fabric qualification</strong><span>Topology meets workload criteria.</span></span>
+                    <span class="gate-state" data-gate-status>Required</span>
+                  </label>
+                  <label class="readiness-check">
+                    <input type="checkbox" data-gate="evidence" disabled>
+                    <span class="gate-icon" aria-hidden="true">03</span>
+                    <span class="gate-copy"><strong>Current evidence</strong><span>Results match the current configuration.</span></span>
+                    <span class="gate-state" data-gate-status>Required</span>
+                  </label>
+                  <label class="readiness-check">
+                    <input type="checkbox" data-gate="ownership" checked disabled>
+                    <span class="gate-icon" aria-hidden="true">04</span>
+                    <span class="gate-copy"><strong>Release authority</strong><span>Maintenance closed; exclusive handoff authorized.</span></span>
+                    <span class="gate-state" data-gate-status>Met</span>
+                  </label>
+                </fieldset>
+                <div class="release-decision" role="region" aria-labelledby="decision-label">
+                  <div class="decision-top"><span id="decision-label">Release decision</span><span class="decision-state" data-release-state>Held</span></div>
+                  <div class="readiness-meter" aria-hidden="true"><span data-meter="node"></span><span data-meter="fabric"></span><span data-meter="evidence"></span><span data-meter="ownership" class="is-met"></span></div>
+                  <p class="gate-count" data-gate-count>1 of 4 conditions met</p>
+                  <div class="decision-result" aria-live="polite" aria-atomic="true">
+                    <h4 data-release-title>Hold for<br>qualification.</h4>
+                    <p data-release-reason>A completed repair does not prove GPU and host health. Re-run validation before relying on this capacity.</p>
+                    <p class="release-blockers" data-release-blockers>Still required: node validation, fabric qualification, current evidence.</p>
+                  </div>
+                  <div class="decision-handoff"><span>Next collaboration</span><strong data-release-owner>Platform engineering + Qualification</strong></div>
+                </div>
+              </div>
+              <div class="lab-footer"><span class="lab-principle">Hardware repaired → evidence renewed → capacity qualified</span><span>Every required condition matters.</span></div>
+              <noscript><p class="lab-static-note">This example holds capacity after a repair. Node validation, fabric qualification, current evidence, and exclusive release authority must all be established before handoff.</p></noscript>
+            </div>
+          </section>
           <div class="hands-on-strip reveal">
             <p class="eyebrow">An engineering foundation</p>
             <ul class="foundation-tags" aria-label="Earlier engineering experience"><li>REST services</li><li>JupyterLab</li><li>Database scale-out</li></ul>
@@ -323,7 +413,6 @@
               </summary>
               <div class="career-detail">
                 <p>Engineering leadership across GPU infrastructure and cloud identity, spanning platform direction, qualification, deployment, repair, and customer acceptance.</p>
-                <p>I lead through engineering managers and connect roadmaps, resource priorities, and operating standards across teams and sites.</p>
                 <div class="career-tags"><span>AI infrastructure</span><span>Cloud identity</span><span>Org leadership</span></div>
               </div>
             </details>
