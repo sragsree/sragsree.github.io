@@ -10,7 +10,13 @@
     if (!hero || !toggle || !label || signals.length < 2) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const mobileLayout = window.matchMedia("(max-width: 640px)");
     const pulseInterval = 3000;
+    const layoutSignals = {
+      desktop: [...hero.querySelectorAll('[data-pulse-layout="desktop"] .infrastructure-signal')],
+      mobile: [...hero.querySelectorAll('[data-pulse-layout="mobile"] .infrastructure-signal')],
+    };
+    let activeSignals = layoutSignals[mobileLayout.matches ? "mobile" : "desktop"];
     let userPaused = false;
     let heroVisible = false;
     let pageSuspended = false;
@@ -27,7 +33,7 @@
       clearSignals();
     };
 
-    const canRun = () => heroVisible && !userPaused && !reducedMotion.matches && !document.hidden && !pageSuspended;
+    const canRun = () => activeSignals.length >= 2 && heroVisible && !userPaused && !reducedMotion.matches && !document.hidden && !pageSuspended;
 
     const playBurst = () => {
       if (!canRun()) {
@@ -35,8 +41,8 @@
         return;
       }
       clearSignals();
-      const freshPaths = signals.filter((signal) => !previousSignals.has(signal));
-      const candidates = freshPaths.length >= 2 ? freshPaths : [...signals];
+      const freshPaths = activeSignals.filter((signal) => !previousSignals.has(signal));
+      const candidates = freshPaths.length >= 2 ? freshPaths : [...activeSignals];
       const selected = [];
       while (selected.length < 2) {
         const index = Math.floor(Math.random() * candidates.length);
@@ -56,7 +62,7 @@
     };
 
     const updateControl = () => {
-      toggle.hidden = reducedMotion.matches;
+      toggle.hidden = reducedMotion.matches || activeSignals.length < 2;
       toggle.setAttribute("aria-pressed", String(userPaused));
       label.textContent = userPaused ? "Resume motion" : "Pause motion";
       toggle.setAttribute("aria-label", userPaused ? "Resume motion: background light pulses" : "Pause motion: background light pulses");
@@ -86,6 +92,13 @@
     reducedMotion.addEventListener("change", () => {
       updateControl();
       syncPlayback();
+    });
+    mobileLayout.addEventListener("change", () => {
+      stop();
+      activeSignals = layoutSignals[mobileLayout.matches ? "mobile" : "desktop"];
+      previousSignals.clear();
+      updateControl();
+      readVisibility();
     });
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) stop();

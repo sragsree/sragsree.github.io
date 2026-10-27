@@ -3441,6 +3441,16 @@ h1>span {
   }
 }
 
+@media(max-width:899px) and (prefers-reduced-motion:no-preference) {
+  .hero-photo .photo-frame {
+    transform: translateY(calc(var(--hero-progress,0) * 8px))
+  }
+
+  .hero-photo .photo-caption {
+    transform: translateY(calc(var(--hero-progress,0) * -4px))
+  }
+}
+
 @media(min-width:1101px) {
   .hero-grid { padding-block: 56px }
   .experience-heading { position: sticky; top: 108px; align-self: start }

@@ -38,6 +38,14 @@
         && title && reason && owner && blockers && stateLabel && count && result;
 
       if (valid) {
+        let releasePending = false;
+        let previewVisible = typeof window.IntersectionObserver !== "function";
+        const playPendingRelease = () => {
+          if (!hasPreview || !releasePending || !previewVisible || reducedMotion.matches
+            || document.hidden || lab.dataset.ready !== "true") return;
+          releasePending = false;
+          preview.classList.add("is-releasing");
+        };
         const render = (animate = true) => {
           const values = Object.fromEntries(inputs.map((input) => [input.dataset.gate, input.checked]));
           const missing = keys.filter((key) => !values[key]);
@@ -69,8 +77,15 @@
               values.ownership ? "Handoff authorized" : "Handoff held",
             ];
             previewLabels.forEach((element, index) => { element.textContent = captions[index]; });
-            // One visual acknowledgement of newly eligible capacity, never a running-workload claim.
-            preview.classList.toggle("is-releasing", animate && ready && !wasReady && !reducedMotion.matches);
+            // On small screens, the decision can sit below its controls. Save the
+            // one-time acknowledgement until the newly eligible capacity is visible.
+            if (!ready || reducedMotion.matches) {
+              releasePending = false;
+              preview.classList.remove("is-releasing");
+            } else if (animate && !wasReady) {
+              releasePending = true;
+              playPendingRelease();
+            }
           }
 
           let decision;
@@ -107,8 +122,19 @@
             if (event.animationName === "capacity-release") preview.classList.remove("is-releasing");
           });
           reducedMotion.addEventListener("change", () => {
-            if (reducedMotion.matches) preview.classList.remove("is-releasing");
+            if (reducedMotion.matches) {
+              releasePending = false;
+              preview.classList.remove("is-releasing");
+            }
           });
+          if (typeof window.IntersectionObserver === "function") {
+            const previewObserver = new window.IntersectionObserver(([entry]) => {
+              previewVisible = entry.isIntersecting && entry.intersectionRatio >= 0.5;
+              playPendingRelease();
+            }, { threshold: 0.5 });
+            previewObserver.observe(preview);
+          }
+          document.addEventListener("visibilitychange", playPendingRelease);
         }
         render(false);
       }
@@ -121,6 +147,9 @@
     let frameId = 0;
     let pendingPoint = null;
     let activeSurface = null;
+    let contactPointerId = null;
+    let contactSurface = null;
+    let releaseTimer = 0;
 
     const clearSurface = (surface) => {
       if (!surface) return;
@@ -131,19 +160,25 @@
 
     const resetPointer = () => {
       if (frameId) window.cancelAnimationFrame(frameId);
+      if (releaseTimer) window.clearTimeout(releaseTimer);
       frameId = 0;
+      releaseTimer = 0;
       pendingPoint = null;
+      contactPointerId = null;
+      contactSurface = null;
       clearSurface(activeSurface);
       activeSurface = null;
     };
 
-    const pointerEnabled = () => hasAnimationFrame && pointerMedia.matches && !reducedMotion.matches && !document.hidden;
+    const isContact = (pointerType) => pointerType === "touch" || pointerType === "pen";
+    const pointerEnabled = (pointerType) => hasAnimationFrame && !reducedMotion.matches && !document.hidden
+      && (isContact(pointerType) || pointerMedia.matches);
 
     const updatePointer = () => {
       frameId = 0;
       const point = pendingPoint;
       pendingPoint = null;
-      if (!point || !pointerEnabled()) {
+      if (!point || !pointerEnabled(point.pointerType)) {
         resetPointer();
         return;
       }
@@ -160,26 +195,56 @@
       // Pixel coordinates let project artwork share the panel's light position.
       activeSurface.style.setProperty("--pointer-x", `${(x * bounds.width).toFixed(2)}px`);
       activeSurface.style.setProperty("--pointer-y", `${(y * bounds.height).toFixed(2)}px`);
-      activeSurface.style.setProperty("--pointer-dx", `${((x - 0.5) * 8).toFixed(2)}px`);
-      activeSurface.style.setProperty("--pointer-dy", `${((y - 0.5) * 8).toFixed(2)}px`);
+      // Touch feedback stays under the contact point without moving the portrait.
+      activeSurface.style.setProperty("--pointer-dx", isContact(point.pointerType) ? "0px" : `${((x - 0.5) * 8).toFixed(2)}px`);
+      activeSurface.style.setProperty("--pointer-dy", isContact(point.pointerType) ? "0px" : `${((y - 0.5) * 8).toFixed(2)}px`);
       activeSurface.classList.add("is-pointer-active");
     };
 
     surfaces.forEach((surface) => {
       surface.classList.add("pointer-surface");
       const queuePointer = (event) => {
-        if (!pointerEnabled() || event.pointerType === "touch") return;
-        pendingPoint = { surface, x: event.clientX, y: event.clientY };
+        if (!pointerEnabled(event.pointerType) || event.isPrimary === false) return;
+        if (isContact(event.pointerType)) {
+          if (contactPointerId !== event.pointerId || contactSurface !== surface) return;
+        } else {
+          if (contactPointerId !== null) return;
+          if (releaseTimer) resetPointer();
+        }
+        pendingPoint = { surface, x: event.clientX, y: event.clientY, pointerType: event.pointerType };
         if (!frameId) frameId = window.requestAnimationFrame(updatePointer);
       };
-      const leaveSurface = () => {
+      const startContact = (event) => {
+        if (!isContact(event.pointerType) || event.isPrimary === false || event.button > 0
+          || !pointerEnabled(event.pointerType)) return;
+        // Nested panels must not compete for the same contact.
+        if (event.target.closest(".pointer-surface") !== surface) return;
+        resetPointer();
+        contactPointerId = event.pointerId;
+        contactSurface = surface;
+        queuePointer(event);
+      };
+      const leaveSurface = (event) => {
+        if (isContact(event.pointerType) || contactPointerId !== null) return;
         if (activeSurface === surface || (pendingPoint && pendingPoint.surface === surface)) resetPointer();
       };
+      surface.addEventListener("pointerdown", startContact, { passive: true });
       surface.addEventListener("pointerenter", queuePointer, { passive: true });
       surface.addEventListener("pointermove", queuePointer, { passive: true });
       surface.addEventListener("pointerleave", leaveSurface);
-      surface.addEventListener("pointercancel", leaveSurface);
     });
+
+    const endContact = (event) => {
+      if (event.pointerId !== contactPointerId) return;
+      contactPointerId = null;
+      contactSurface = null;
+      // One shared timeout makes a quick tap visible, then lets CSS fade it out.
+      releaseTimer = window.setTimeout(resetPointer, 650);
+    };
+    window.addEventListener("pointerup", endContact, { passive: true });
+    window.addEventListener("pointercancel", (event) => {
+      if (event.pointerId === contactPointerId || !isContact(event.pointerType)) resetPointer();
+    }, { passive: true });
 
     // Tabs and project filters can hide a panel while the pointer stays still.
     const hiddenObserver = new MutationObserver(() => {
@@ -187,7 +252,8 @@
     });
     surfaces.forEach((surface) => hiddenObserver.observe(surface, { attributes: true, attributeFilter: ["hidden"] }));
 
-    window.addEventListener("scroll", resetPointer, { passive: true });
+    window.addEventListener("scroll", resetPointer, { passive: true, capture: true });
+    window.addEventListener("blur", resetPointer);
     document.addEventListener("visibilitychange", resetPointer);
     pointerMedia.addEventListener("change", resetPointer);
     reducedMotion.addEventListener("change", resetPointer);

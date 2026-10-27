@@ -126,7 +126,7 @@
       }
       if (backToTop) backToTop.hidden = scrollY <= 600;
       if (hero) {
-        const nextProgress = hasAnimationFrame && desktop.matches && !reducedMotion.matches
+        const nextProgress = hasAnimationFrame && !reducedMotion.matches
           ? Math.min(1, Math.max(0, (scrollY + headerHeight - heroTop) / heroHeight))
           : 0;
         if (nextProgress !== heroProgress) {
