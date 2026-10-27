@@ -5,7 +5,7 @@
 .hero-photo { z-index: 1; }
 .hero-infrastructure { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; color: var(--accent); pointer-events: none; z-index: -1; }
 .hero-infrastructure svg { width: 100%; height: 100%; }
-.hero-infrastructure .infrastructure-mobile { display: none; }
+.hero-mobile-circuit { display: none; }
 .infrastructure-grid { opacity: .11; }
 .infrastructure-traces { stroke: currentColor; stroke-width: 1; opacity: .2; }
 .infrastructure-signal { stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 5 95; opacity: 0; }
@@ -115,10 +115,13 @@ html[data-theme="dark"] .readiness-lab { --lab-wait: #e4b675; --lab-wait-bg: #37
   .decision-result h4 { font-size: 29px; }
 }
 @media(max-width:640px) {
-  .hero-infrastructure [data-pulse-layout="desktop"] { display: none; }
-  .hero-infrastructure .infrastructure-mobile { display: block; }
+  .hero-infrastructure { display: none; }
+  /* Reserve space for mobile circuits so no route or glow can cross copy. */
+  .hero-mobile-circuit { display: block; position: relative; height: 48px; margin: 8px 0; overflow: hidden; color: var(--accent); pointer-events: none; }
+  .hero-mobile-circuit svg { display: block; width: 100%; height: 100%; }
+  .hero-mobile-circuit + .hero-description { margin-top: 0; }
   .infrastructure-mobile path,.infrastructure-mobile circle { vector-effect: non-scaling-stroke; }
-  .infrastructure-mobile .infrastructure-traces { opacity: .13; }
+  .infrastructure-mobile .infrastructure-traces { opacity: .24; }
   .infrastructure-mobile .infrastructure-signal { stroke-width: 2.5; stroke-dasharray: 8 92; }
   .hero-motion-toggle { bottom: 4px; right: 6px; font-size: 9px; }
   .readiness-heading { display: block; margin-bottom: 24px; }
@@ -164,7 +167,7 @@ html[data-theme="dark"] .readiness-lab { --lab-wait: #e4b675; --lab-wait-bg: #37
   .pointer-surface { --pointer-radius: 240px; }
 }
 @media print {
-  .hero-infrastructure,.pointer-surface::after,.project-card.pointer-surface .project-art::after,.hero-motion-toggle,.lab-presets,.capacity-transfer { display: none!important; }
+  .hero-infrastructure,.hero-mobile-circuit,.pointer-surface::after,.project-card.pointer-surface .project-art::after,.hero-motion-toggle,.lab-presets,.capacity-transfer { display: none!important; }
   .readiness-section { margin-top: 18px; padding: 18px 0; }
   .readiness-lab { background: transparent; border: 1px solid #bbb; }
   .lab-workspace { display: grid; grid-template-columns: 1fr 1fr; }
